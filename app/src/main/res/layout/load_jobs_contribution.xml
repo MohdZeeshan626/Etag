@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        style="@style/StyleBold"
+        android:id="@+id/tvItem"
+        android:background="@drawable/drawable_submit_button_gradient_bg"
+        android:text="Mp (10)"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/fragment_small_margin"
+        android:drawablePadding="@dimen/fragment_spacing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/fragment_spacing"
+        android:paddingHorizontal="@dimen/fragment_medium_margin"
+        android:paddingVertical="@dimen/small_text_size"
+        android:textSize="@dimen/small_text_size"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

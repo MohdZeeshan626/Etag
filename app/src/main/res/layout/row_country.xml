@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/llParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_horizontal_margin">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdvFlagImage"
+            android:layout_width="@dimen/flag_image_width"
+            android:layout_height="@dimen/flag_image_height" />
+
+    <TextView
+            android:id="@+id/tvCountryName"
+            style="@style/StyleMedium"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical" />
+
+    <TextView
+            android:id="@+id/tvCountryCode"
+            style="@style/StyleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorPrimaryText" />
+
+</LinearLayout>

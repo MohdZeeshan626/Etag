@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/fragment_double_margin"
+            android:clipToPadding="false">
+
+            <TextView
+                android:id="@+id/tvProperties"
+                style="@style/StyleSemiBold"
+                android:layout_width="0dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/st_owners"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorHeaderTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOwners"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginTop="@dimen/fragment_small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:clipToPadding="false"
+                app:layout_constraintTop_toBottomOf="@+id/tvProperties" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddOwner"
+                style="@style/StyleSubmitButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/default_button_height"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:drawableStart="@drawable/ic_new_jobs"
+                android:drawablePadding="@dimen/fragment_medium_margin"
+                android:gravity="center"
+                android:text="@string/st_add_owner"
+                app:layout_constraintEnd_toStartOf="@+id/btnAddExisting"
+                app:layout_constraintStart_toStartOf="@+id/tvProperties"
+                app:layout_constraintTop_toBottomOf="@+id/rvOwners" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddExisting"
+                style="@style/StyleSubmitButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/default_button_height"
+                android:drawableStart="@drawable/ic_new_jobs"
+                android:drawablePadding="@dimen/fragment_medium_margin"
+                android:gravity="center"
+                android:text="@string/st_add_existing"
+                app:layout_constraintEnd_toEndOf="@+id/tvProperties"
+                app:layout_constraintStart_toEndOf="@+id/btnAddOwner"
+                app:layout_constraintTop_toTopOf="@+id/btnAddOwner"
+                app:layout_constraintBottom_toBottomOf="@+id/btnAddOwner"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

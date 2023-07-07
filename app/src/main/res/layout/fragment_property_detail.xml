@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="0dp"
+            android:theme="@style/DarkSearchViewTheme"
+            android:visibility="visible">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@color/colorTransparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvOwnerName"
+                        style="@style/StyleSemiBold"
+                        android:layout_width="0dp"
+                        android:layout_margin="@dimen/activity_horizontal_margin"
+                        android:text="Tony Denial"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:textColor="@color/colorHeaderTitle"
+                        app:layout_constraintBottom_toBottomOf="@+id/btnMenu"
+                        app:layout_constraintEnd_toStartOf="@+id/btnMenu"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/btnMenu" />
+
+                    <ImageView
+                        android:id="@+id/btnMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="center"
+                        android:src="@drawable/ic_edit_solid_bg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdvUserImage"
+                        android:layout_width="@dimen/profile_image_size"
+                        android:layout_height="@dimen/profile_image_size"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnMenu"
+                        app:placeholderImage="@drawable/ic_property_placeholder"
+                        app:roundAsCircle="true" />
+
+
+                    <TextView
+                        android:id="@+id/tvPropertyName"
+                        style="@style/StyleSemiBold"
+                        android:layout_marginTop="@dimen/header_top_margin"
+                        android:text="@string/st_property_name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        app:layout_constraintTop_toBottomOf="@+id/sdvUserImage" />
+
+                    <TextView
+                        android:id="@+id/etPropertyName"
+                        style="@style/StyleInputEditTextLight"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/line_spacing_extra"
+                        android:layout_marginEnd="@dimen/line_spacing_extra"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        app:layout_constraintEnd_toStartOf="@+id/etLastName"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvPropertyName" />
+
+                    <TextView
+                        android:id="@+id/tvShortName"
+                        style="@style/StyleSemiBold"
+                        android:text="@string/st_short_name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvPropertyName"
+                        app:layout_constraintStart_toStartOf="@+id/etLastName"
+                        app:layout_constraintTop_toTopOf="@+id/tvPropertyName" />
+
+                    <TextView
+                        android:id="@+id/etLastName"
+                        style="@style/StyleInputEditTextLight"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/line_spacing_extra"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/etPropertyName"
+                        app:layout_constraintTop_toTopOf="@+id/etPropertyName" />
+
+                    <TextView
+                        android:id="@+id/tvType"
+                        style="@style/StyleSemiBold"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/st_property_type_label"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        app:layout_constraintStart_toStartOf="@+id/etPropertyName"
+                        app:layout_constraintTop_toBottomOf="@+id/etPropertyName" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clPropertyView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_input_edittext_normal1"
+                        android:layout_marginTop="@dimen/line_spacing_extra"
+                        android:padding="0dp"
+                        app:layout_constraintEnd_toEndOf="@+id/etLastName"
+                        app:layout_constraintStart_toStartOf="@+id/etPropertyName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvType">
+
+                        <TextView
+                            android:id="@+id/spnrType"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/default_edittext_height"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="@dimen/fragment_medium_margin"
+                            android:singleLine="true"
+                            android:elevation="0dp"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupProperty"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="0dp"
+                            android:layout_marginHorizontal="@dimen/fragment_medium_margin"
+                            android:paddingBottom="@dimen/fragment_small_margin"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="@dimen/fragment_small_margin"
+                            app:layout_constraintTop_toTopOf="@+id/spnrType"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tvChargeType"
+                        style="@style/StyleSemiBold"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/st_charge_type_label"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        app:layout_constraintStart_toStartOf="@+id/etPropertyName"
+                        app:layout_constraintTop_toBottomOf="@+id/clPropertyView" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clChargeView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_input_edittext_normal1"
+                        android:padding="0dp"
+                        android:layout_marginTop="@dimen/line_spacing_extra"
+                        app:layout_constraintEnd_toEndOf="@+id/etLastName"
+                        app:layout_constraintStart_toStartOf="@+id/etPropertyName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvChargeType">
+
+                        <TextView
+                            android:id="@+id/spnrChargeType"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/default_edittext_height"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="@dimen/fragment_medium_margin"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupCharge"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="0dp"
+                            android:layout_marginHorizontal="@dimen/fragment_medium_margin"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/fragment_small_margin"
+                            android:layout_marginTop="@dimen/fragment_small_margin"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/spnrChargeType"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvSqFit"
+                        style="@style/StyleSemiBold"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/st_total_sq_fit"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        app:layout_constraintStart_toStartOf="@+id/etPropertyName"
+                        app:layout_constraintTop_toBottomOf="@+id/clChargeView" />
+
+                    <TextView
+                        android:id="@+id/etSqFit"
+                        style="@style/StyleInputEditTextLight"
+                        android:layout_marginTop="@dimen/line_spacing_extra"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        app:layout_constraintEnd_toEndOf="@+id/etLastName"
+                        app:layout_constraintStart_toStartOf="@+id/etPropertyName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSqFit" />
+
+                    <TextView
+                        android:id="@+id/tvComment"
+                        style="@style/StyleSemiBold"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/st_comments"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        app:layout_constraintStart_toStartOf="@+id/etPropertyName"
+                        app:layout_constraintTop_toBottomOf="@+id/etSqFit" />
+
+                    <TextView
+                        android:id="@+id/etComment"
+                        style="@style/StyleInputEditTextLight"
+                        android:layout_marginTop="@dimen/line_spacing_extra"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/etLastName"
+                        app:layout_constraintStart_toStartOf="@+id/tvComment"
+                        app:layout_constraintTop_toBottomOf="@+id/tvComment" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMenuAdapter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.max360group.cammax360.views.utils.NonSwipeableViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/fragment_medium_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvMenuAdapter" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

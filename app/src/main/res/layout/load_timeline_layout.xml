@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/fragment_default_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/viewDate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="#E4E4E4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDate"
+        android:layout_marginTop="@dimen/fragment_spacing"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        style="@style/StyleSemiBold"
+        android:id="@+id/tvDate"
+        android:text="28 Dec,2021"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:visibility="visible"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingHorizontal="@dimen/fragment_small_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_timeline_notes"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        style="@style/StyleMedium"
+        android:id="@+id/tvType"
+        android:layout_width="0dp"
+        android:text="Christan Gray uploaded new photo “jobname2.jpeg”."
+        android:textColor="@color/black"
+       android:textFontWeight="400"
+        app:layout_constraintStart_toEndOf="@+id/ivIcon"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toTopOf="@+id/ivIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvMessage"
+        android:layout_width="0dp"
+        android:text="@string/st_job_info_edited"
+        android:textColor="@color/colorDisabledText"
+        app:layout_constraintStart_toEndOf="@+id/ivIcon"
+        android:textFontWeight="400"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+       app:layout_constraintTop_toBottomOf="@+id/tvType"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSdvView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage"
+        app:layout_constraintStart_toStartOf="@+id/tvType">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdvMedia"
+            android:layout_width="@dimen/fragment_double_margin"
+            android:layout_height="@dimen/fragment_double_margin"
+            app:roundedCornerRadius="@dimen/rounded_corner_radius"
+            app:placeholderImage="@color/colorPlaceHolderImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdvUserPhoto"
+            android:layout_width="@dimen/fragment_double_margin"
+            android:layout_height="@dimen/fragment_double_margin"
+            app:roundedCornerRadius="@dimen/rounded_corner_radius"
+            app:placeholderImage="@drawable/ic_user_placeholder"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundAsCircle="true"
+            app:placeholderImageScaleType="centerCrop"
+            android:visibility="gone"
+            app:roundingBorderColor="?attr/primaryTextColor"
+            app:roundingBorderWidth="@dimen/divider_height"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdvMedia1"
+            android:layout_width="@dimen/fragment_double_margin"
+            android:layout_height="@dimen/fragment_double_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sdvMedia"
+            android:layout_marginStart="@dimen/fragment_small_margin"
+            app:roundedCornerRadius="@dimen/rounded_corner_radius"
+            app:placeholderImage="@color/colorPlaceHolderImage"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvTime"
+        android:layout_width="0dp"
+        android:text="06:30"
+        android:textColor="@color/colorDisabledText"
+        app:layout_constraintStart_toEndOf="@+id/ivIcon"
+        android:textFontWeight="400"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toBottomOf="@+id/clSdvView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+    <View
+        android:layout_width="@dimen/divider_height"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/ivIcon"
+        android:background="#E4E4E4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        app:layout_constraintEnd_toEndOf="@id/ivIcon"
+        app:layout_constraintTop_toBottomOf="@id/ivIcon"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

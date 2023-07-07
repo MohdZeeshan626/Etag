@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar" />
+
+    <TextView
+       style="@style/StyleSemiBold"
+        android:id="@+id/tvUserName"
+        android:text="Ronaldo"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/fragment_small_margin"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        app:layout_constraintBottom_toTopOf="@id/btnSaveAsNewRole"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvListing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_small_margin"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/fragment_vertical_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveAsNewRole"
+        style="@style/StyleSubmitButton"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/fragment_small_margin"
+        android:layout_marginBottom="@dimen/fragment_default_margin"
+        android:text="@string/st_save_as_new_role"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSaveChanges"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveChanges"
+        style="@style/StyleSubmitButton"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/fragment_small_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:text="@string/st_save_changes"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSaveAsNewRole"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSaveAsNewRole"
+        app:layout_constraintTop_toTopOf="@+id/btnSaveAsNewRole" />
+
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "381086344951",
+    "project_id": "cammax360",
+    "storage_bucket": "cammax360.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381086344951:android:f5cef45228935a634295f2",
+        "android_client_info": {
+          "package_name": "com.max360group.cammax360"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381086344951-vm3hks4nom05o5o3u61k9v8emeiitc1r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.max360group.cammax360",
+            "certificate_hash": "8c0c1782714e5046d50825fc05246b621c626d63"
+          }
+        },
+        {
+          "client_id": "381086344951-bvq3e1vbkc48h00lofbp5nh1pdnmbre0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4fxzvaRN45AgVtrfwTw3uHYXPkzBQNto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381086344951-bvq3e1vbkc48h00lofbp5nh1pdnmbre0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

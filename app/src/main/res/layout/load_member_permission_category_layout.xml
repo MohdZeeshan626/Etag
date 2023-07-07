@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/fragment_medium_margin"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/StyleBold"
+        android:text="Media(photos/Videos)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbAll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_small_margin"
+        android:button="@drawable/drawable_check_box_selector"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cbView"
+        app:layout_constraintTop_toBottomOf="@+id/tvName">
+
+        <ImageView
+            android:id="@+id/ivAll"
+            android:layout_width="@dimen/ic_verctor_image_size"
+            android:layout_height="@dimen/ic_verctor_image_size"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+
+
+        <TextView
+            android:id="@+id/tvAll"
+            style="@style/StyleSemiBold"
+            android:layout_marginStart="@dimen/fragment_spacing"
+            android:layout_marginTop="@dimen/fragment_spacing"
+            android:text="@string/st_all"
+            android:textColor="@color/colorHeaderTitle"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/cbAll"
+            app:layout_constraintTop_toTopOf="@+id/cbAll" />
+
+
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_small_margin"
+        android:button="@drawable/drawable_check_box_selector"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintStart_toEndOf="@+id/cbAll"
+        app:layout_constraintEnd_toStartOf="@+id/cbEdit"
+        app:layout_constraintTop_toBottomOf="@+id/tvName">
+
+        <ImageView
+            android:id="@+id/ivView"
+            android:layout_width="@dimen/ic_verctor_image_size"
+            android:layout_height="@dimen/ic_verctor_image_size"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+
+
+        <TextView
+            android:id="@+id/tvView"
+            style="@style/StyleSemiBold"
+            android:layout_marginStart="@dimen/fragment_spacing"
+            android:layout_marginTop="@dimen/fragment_spacing"
+            android:text="@string/st_view"
+            android:textColor="@color/colorHeaderTitle"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/cbAll"
+            app:layout_constraintTop_toTopOf="@+id/cbAll" />
+
+
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_small_margin"
+        android:button="@drawable/drawable_check_box_selector"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintStart_toEndOf="@+id/cbView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName">
+
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="@dimen/ic_verctor_image_size"
+            android:layout_height="@dimen/ic_verctor_image_size"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+
+
+        <TextView
+            android:id="@+id/tvEdit"
+            style="@style/StyleSemiBold"
+            android:layout_marginStart="@dimen/fragment_spacing"
+            android:layout_marginTop="@dimen/fragment_spacing"
+            android:text="@string/st_edit"
+            android:textColor="@color/colorHeaderTitle"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/cbAll"
+            app:layout_constraintTop_toTopOf="@+id/cbAll" />
+
+
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_small_margin"
+        android:button="@drawable/drawable_check_box_selector"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintStart_toStartOf="@+id/cbAll"
+        app:layout_constraintEnd_toEndOf="@+id/cbAll"
+        app:layout_constraintTop_toBottomOf="@+id/cbAll">
+
+        <ImageView
+            android:id="@+id/ivAdd"
+            android:layout_width="@dimen/ic_verctor_image_size"
+            android:layout_height="@dimen/ic_verctor_image_size"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+
+
+        <TextView
+            android:id="@+id/tvAdd"
+            style="@style/StyleSemiBold"
+            android:layout_marginStart="@dimen/fragment_spacing"
+            android:layout_marginTop="@dimen/fragment_spacing"
+            android:text="@string/st_add"
+            android:textColor="@color/colorHeaderTitle"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/cbAll"
+            app:layout_constraintTop_toTopOf="@+id/cbAll" />
+
+
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_small_margin"
+        android:button="@drawable/drawable_check_box_selector"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintStart_toStartOf="@+id/cbView"
+        app:layout_constraintEnd_toEndOf="@+id/cbView"
+        app:layout_constraintTop_toBottomOf="@+id/cbAll">
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="@dimen/ic_verctor_image_size"
+            android:layout_height="@dimen/ic_verctor_image_size"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+
+
+        <TextView
+            android:id="@+id/tvDelete"
+            style="@style/StyleSemiBold"
+            android:layout_marginStart="@dimen/fragment_spacing"
+            android:layout_marginTop="@dimen/fragment_spacing"
+            android:text="@string/st_delete"
+            android:textColor="@color/colorHeaderTitle"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/cbAll"
+            app:layout_constraintTop_toTopOf="@+id/cbAll" />
+
+
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbTimeLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_small_margin"
+        android:button="@drawable/drawable_check_box_selector"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintStart_toStartOf="@+id/cbEdit"
+        app:layout_constraintEnd_toEndOf="@+id/cbEdit"
+        app:layout_constraintTop_toBottomOf="@+id/cbAll">
+
+        <ImageView
+            android:id="@+id/ivTimeLine"
+            android:layout_width="@dimen/ic_verctor_image_size"
+            android:layout_height="@dimen/ic_verctor_image_size"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+
+
+        <TextView
+            android:id="@+id/tvTimeLine"
+            style="@style/StyleSemiBold"
+            android:layout_marginStart="@dimen/fragment_spacing"
+            android:layout_marginTop="@dimen/fragment_spacing"
+            android:text="@string/st_time_line"
+            android:textColor="@color/colorHeaderTitle"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/cbAll"
+            app:layout_constraintTop_toTopOf="@+id/cbAll" />
+
+
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fragment_small_margin"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:spanCount="3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

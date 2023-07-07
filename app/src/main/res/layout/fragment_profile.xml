@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackgroundBg"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivHeaderView"
+                android:layout_width="0dp"
+                android:layout_height="114dp"
+                android:background="?attr/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdvUserImage"
+                android:layout_width="@dimen/profile_image_size"
+                android:layout_height="@dimen/profile_image_size"
+                app:roundAsCircle="true"
+                app:roundingBorderColor="?attr/primaryTextColor"
+                app:roundingBorderWidth="@dimen/divider_height"
+                app:placeholderImage="@drawable/ic_user_placeholder"
+               app:placeholderImageScaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/ivHeaderView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivHeaderView" />
+
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/StyleSemiBold"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                tools:text="John Denial"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sdvUserImage" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                style="@style/StyleRegular"
+                android:layout_marginTop="@dimen/fragment_spacing"
+                tools:text="jogndenial@gmail.com"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEditPofile"
+                style="@style/StyleSubmitButton"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:text="@string/st_edit_profile"
+                app:layout_constraintEnd_toStartOf="@id/btnChangePassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnChangePassword"
+                style="@style/StyleSubmitButton"
+                android:layout_width="0dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:text="@string/st_change_password"
+                app:layout_constraintBottom_toBottomOf="@+id/btnEditPofile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnEditPofile"
+                app:layout_constraintTop_toTopOf="@+id/btnEditPofile" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPlans"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_stroke_white"
+                android:backgroundTint="@color/colorPlaceHolderImageDark"
+                app:layout_constraintTop_toBottomOf="@+id/btnEditPofile"
+                app:layout_constraintStart_toStartOf="@+id/btnEditPofile"
+                app:layout_constraintEnd_toEndOf="@id/btnChangePassword"
+                android:padding="@dimen/fragment_default_margin"
+                android:layout_marginTop="@dimen/fragment_default_margin">
+
+                <TextView
+                    style="@style/StyleBold"
+                    android:id="@+id/tvPlanName"
+                    android:text="CAM MAX PRO PLUS"
+                    android:textColor="?attr/primaryTextColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+                <TextView
+                    style="@style/StyleRegular"
+                    android:id="@+id/tvExpiryDate"
+                    android:text="Expiring on Sept 23, 2021"
+                    android:textColor="@color/colorDisabledText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPlanName"
+                    android:layout_marginTop="@dimen/line_spacing_extra"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/StyleSubmitButton"
+                    android:id="@+id/btnUpgradePlan"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="@string/st_upgrade_plan"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    app:layout_constraintTop_toBottomOf="@+id/tvExpiryDate"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/colorDivider"
+                app:layout_constraintTop_toBottomOf="@+id/clPlans"
+                app:layout_constraintStart_toStartOf="@+id/clPlans"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                app:layout_constraintEnd_toEndOf="@+id/clPlans"/>
+
+            <TextView
+                android:id="@+id/tvAccountsLevel"
+                style="@style/StyleSemiBold"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:text="Accounts"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAccounts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/fragment_vertical_margin"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/tvAccountsLevel"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

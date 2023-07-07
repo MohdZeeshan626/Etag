@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:background="@drawable/drawable_color_white_rounded_corners_solid"
+    android:elevation="48dp"
+    android:outlineSpotShadowColor="@color/colorElevationShadow"
+    android:layout_marginVertical="@dimen/fragment_small_margin">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdvPropertyImage"
+        android:layout_width="@dimen/user_image_size_chat"
+        android:layout_height="@dimen/user_image_size_chat"
+        app:placeholderImage="@drawable/ic_user_placeholder"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundAsCircle="true"
+        app:roundedCornerRadius="@dimen/rounded_corner_radius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/StyleBold"
+        android:id="@+id/tvPropertyName"
+        android:layout_width="0dp"
+        android:text="Property Name"
+        android:textColor="@color/colorHeaderTitle"
+        app:layout_constraintEnd_toStartOf="@id/ivMenu"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        android:singleLine="true"
+        app:layout_constraintStart_toEndOf="@+id/sdvPropertyImage"
+        app:layout_constraintTop_toTopOf="@+id/sdvPropertyImage"
+        android:layout_marginTop="@dimen/line_spacing_extra"
+        android:layout_marginStart="@dimen/fragment_medium_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvAddress"
+        android:layout_width="0dp"
+        android:text="owner@gmail.com"
+        android:textColor="@color/colorDisabledText"
+        app:layout_constraintEnd_toStartOf="@+id/ivMenu"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        app:layout_constraintStart_toStartOf="@+id/tvPropertyName"
+        app:layout_constraintTop_toBottomOf="@+id/tvPropertyName"
+        android:layout_marginTop="@dimen/line_spacing_extra"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+    <ImageView
+        android:id="@+id/ivMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/line_spacing_extra"
+        android:background="@drawable/drawable_submit_button_gradient_bg"
+        android:src="@drawable/ic_more"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height_medium"
+        android:background="@color/colorDivider"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvStatusLevel"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:text="@string/st_status"
+        android:textColor="@color/colorDisabledText"
+        android:layout_marginTop="@dimen/fragment_medium_margin"/>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvStatus"
+        app:layout_constraintStart_toEndOf="@+id/tvStatusLevel"
+        android:layout_marginStart="@dimen/line_spacing_extra"
+        app:layout_constraintTop_toTopOf="@+id/tvStatusLevel"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStatusLevel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:text="Active"
+        android:textColor="@color/black"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/etComment"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdvImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/photoSize"
+                android:scaleType="centerCrop"
+                app:placeholderImage="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/playerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@+id/sdvImage"
+                app:layout_constraintBottom_toBottomOf="@+id/sdvImage"
+                app:layout_constraintStart_toStartOf="@+id/sdvImage"
+                app:layout_constraintEnd_toEndOf="@+id/sdvImage"
+                app:resize_mode="fill"
+                app:show_buffering="always"
+                app:ad_marker_color="?attr/primaryTextColor"
+                app:played_ad_marker_color="?attr/primaryTextColor"
+                app:played_color="?attr/primaryTextColor"
+                app:unplayed_color="@color/grey"
+                app:buffered_color="@color/grey"
+                app:use_controller="true"/>
+
+            <com.max360group.cammax360.views.utils.TouchyWebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:nestedScrollingEnabled="true"
+                app:layout_constraintTop_toTopOf="@+id/sdvImage"
+                app:layout_constraintBottom_toBottomOf="@+id/sdvImage"
+                app:layout_constraintStart_toStartOf="@+id/sdvImage"
+                app:layout_constraintEnd_toEndOf="@+id/sdvImage"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/pdfView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@+id/sdvImage"
+                app:layout_constraintBottom_toBottomOf="@+id/sdvImage"
+                app:layout_constraintStart_toStartOf="@+id/sdvImage"
+                app:layout_constraintEnd_toEndOf="@+id/sdvImage"/>
+
+            <ImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_edit"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="@dimen/fragment_vertical_margin"
+                android:layout_height="@dimen/fragment_vertical_margin"
+                android:layout_marginTop="@dimen/small_text_size"
+                android:src="@drawable/ic_black_delete"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                app:layout_constraintTop_toBottomOf="@+id/ivEdit" />
+
+            <ImageView
+                android:id="@+id/ivTags"
+                android:layout_width="@dimen/fragment_vertical_margin"
+                android:layout_height="@dimen/fragment_vertical_margin"
+                android:layout_marginTop="@dimen/small_text_size"
+                android:src="@drawable/ic_video_detail"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/ivDelete"
+                app:layout_constraintTop_toBottomOf="@+id/ivDelete" />
+
+            <ImageView
+                android:id="@+id/ivVisibility"
+                android:layout_width="@dimen/fragment_vertical_margin"
+                android:layout_height="@dimen/fragment_vertical_margin"
+                android:layout_marginTop="@dimen/small_text_size"
+                android:src="@drawable/ic_black_preview"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/ivTags"
+                app:layout_constraintTop_toBottomOf="@+id/ivTags" />
+
+            <ImageView
+                android:id="@+id/ivShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_text_size"
+                android:src="@drawable/ic_share_photo"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/ivVisibility"
+                app:layout_constraintTop_toBottomOf="@+id/ivVisibility" />
+
+            <TextView
+                android:id="@+id/tvImageName"
+                style="@style/StyleSemiBold"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
+                android:text="Jobnamewedwefwwefdwewefwewefwefwef1.jpeg"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/colorHeaderTitle"
+                app:layout_constraintEnd_toStartOf="@+id/btnMenu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnMenu" />
+
+            <ImageView
+                android:id="@+id/btnMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:background="@drawable/drawable_submit_button_gradient_bg"
+                android:gravity="center"
+                android:padding="@dimen/line_spacing_extra"
+                android:src="@drawable/ic_more"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sdvImage" />
+
+
+            <TextView
+                android:id="@+id/tvUserName"
+                style="@style/StyleRegular"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/line_spacing_extra"
+                android:text="Ashley Green"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="@color/colorDisabledText"
+                app:layout_constraintEnd_toStartOf="@+id/btnMenu"
+                app:layout_constraintStart_toStartOf="@+id/tvImageName"
+                app:layout_constraintTop_toBottomOf="@+id/tvImageName" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/fragment_medium_margin"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/fragment_medium_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tvUserName" />
+
+            <ImageView
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/fragment_small_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layerType="software"
+                android:src="@drawable/dotted_line_view"
+                app:layout_constraintEnd_toEndOf="@+id/btnMenu"
+                app:layout_constraintStart_toStartOf="@+id/tvImageName"
+                app:layout_constraintTop_toBottomOf="@+id/rvTags" />
+
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/rvUsersList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:shimmer_demo_child_count="5"
+                app:shimmer_demo_grid_child_count="1"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_duration="800"
+                app:shimmer_demo_shimmer_color="@color/colorPrimary"
+                app:shimmer_demo_layout="@layout/listing_shimmer_view"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <EditText
+        android:id="@+id/etComment"
+        style="@style/StyleInputEditTextLight"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:hint="@string/st_enter_your_comment"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColorHint="@color/colorDisabledText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/StyleSubmitButton"
+        android:id="@+id/btnAddPost"
+        android:text="@string/st_post"
+        android:layout_height="@dimen/fragment_vertical_margin"
+        app:layout_constraintBottom_toBottomOf="@id/etComment"
+        app:layout_constraintEnd_toEndOf="@+id/etComment"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        app:layout_constraintTop_toTopOf="@id/etComment" />
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

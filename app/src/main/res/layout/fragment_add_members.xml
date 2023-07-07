@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/StyleSemiBold"
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="@string/st_add_members"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/colorHeaderTitle"
+        app:layout_constraintEnd_toStartOf="@+id/btnSave"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/tvSkip"
+        style="@style/StyleSemiBold"
+        android:layout_width="0dp"
+        android:text="@string/st_skip"
+        android:padding="@dimen/line_spacing_extra"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="?attr/primaryTextColor"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"/>
+
+    <EditText
+        android:id="@+id/etSearch"
+        style="@style/StyleInputEditTextLight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        android:hint="@string/st_search"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:drawablePadding="@dimen/fragment_medium_margin"
+        android:drawableStart="@drawable/ic_baseline_search_24"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListing"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/fragment_default_margin"
+        android:paddingBottom="158dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddMembers"
+        style="@style/StyleSubmitButton"
+        android:layout_marginBottom="@dimen/fragment_medium_margin"
+        android:text="@string/st_add_selected_members"
+        app:layout_constraintBottom_toTopOf="@+id/btnInviteMembers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnInviteMembers"
+        style="@style/StyleSubmitButton"
+        android:layout_marginBottom="@dimen/fragment_default_margin"
+        android:text="@string/st_invite_new_members"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"/>
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

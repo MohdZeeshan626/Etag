@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/actionByDate"
+        android:title="@string/st_by_date" />
+    <item
+        android:id="@+id/actionByContributor"
+        android:title="@string/st_vy_contributor"
+        />
+
+</menu>

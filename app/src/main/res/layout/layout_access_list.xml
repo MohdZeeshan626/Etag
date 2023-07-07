@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbAll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        android:button="@drawable/drawable_check_box_selector"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivAll"
+            android:layout_width="@dimen/ic_verctor_image_size"
+            android:layout_height="@dimen/ic_verctor_image_size"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+
+        <TextView
+            android:id="@+id/tvAll"
+            style="@style/StyleSemiBold"
+            android:layout_marginStart="@dimen/fragment_medium_margin"
+            android:layout_marginTop="@dimen/fragment_spacing"
+            android:text="User name"
+            android:textColor="@color/colorHeaderTitle"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/cbAll"
+            app:layout_constraintTop_toTopOf="@+id/cbAll" />
+
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

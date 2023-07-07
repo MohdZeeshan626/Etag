@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+    android:layout_marginVertical="@dimen/fragment_small_margin"
+    android:background="@drawable/drawable_color_white_rounded_corners_solid"
+    android:elevation="@dimen/home_card_elevation"
+    android:paddingBottom="@dimen/fragment_default_margin">
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/StyleBold"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/fragment_default_margin"
+        android:text="Home"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        style="@style/StyleRegular"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        android:text="+919797986867"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fragment_medium_margin"
+        android:layout_marginTop="@dimen/fragment_small_margin"
+        android:button="@drawable/drawable_check_box_selector"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPhone">
+
+        <ImageView
+            android:layout_width="@dimen/activity_horizontal_margin"
+            android:layout_height="@dimen/activity_horizontal_margin"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+
+        <TextView
+            style="@style/StyleSemiBold"
+            android:layout_marginStart="@dimen/fragment_small_margin"
+            android:gravity="center"
+            android:paddingTop="@dimen/divider_height_medium"
+            android:text="@string/st_default"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black" />
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbTextMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fragment_medium_margin"
+        android:button="@drawable/drawable_check_box_selector"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintBottom_toBottomOf="@+id/cbDefault"
+        app:layout_constraintStart_toEndOf="@+id/cbDefault"
+        app:layout_constraintTop_toTopOf="@+id/cbDefault">
+
+        <ImageView
+            android:layout_width="@dimen/activity_horizontal_margin"
+            android:layout_height="@dimen/activity_horizontal_margin"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+
+        <TextView
+            style="@style/StyleSemiBold"
+            android:layout_marginStart="@dimen/fragment_small_margin"
+            android:gravity="center"
+            android:paddingTop="@dimen/divider_height_medium"
+            android:text="@string/st_text_message"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black" />
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

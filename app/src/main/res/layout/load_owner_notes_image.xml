@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="@dimen/line_spacing_extra">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdvImage"
+        android:layout_width="@dimen/fragment_double_margin"
+        android:layout_height="@dimen/fragment_double_margin"
+        app:roundedCornerRadius="@dimen/rounded_corner_radius"
+        app:placeholderImage="@color/colorPlaceHolderImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:placeholderImageScaleType="centerCrop"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

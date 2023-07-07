@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height_medium"
+        android:background="@color/colorDividerDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        style="@style/StyleBold"
+        android:id="@+id/tvName"
+        android:text="John Deniel"
+        android:textColor="@color/colorHeaderTitle"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toTopOf="@+id/ivEdit"/>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvUserEmail"
+        android:text="JD@gmail.com"
+        android:textColor="@color/colorHeaderTitle"
+        android:textSize="@dimen/small_text_size"
+        android:layout_marginTop="@dimen/line_spacing_extra"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/tvName"/>
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="@dimen/fragment_vertical_margin"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="@dimen/divider_height_medium"
+        android:layout_height="0dp"
+        android:background="@color/colorDividerDark"
+        app:layout_constraintEnd_toStartOf="@+id/ivDelete"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        android:layout_width="@dimen/fragment_double_margin"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit_new"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="@dimen/divider_height_medium"
+        android:layout_height="0dp"
+        android:background="@color/colorDividerDark"
+        app:layout_constraintEnd_toStartOf="@+id/ivEdit"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

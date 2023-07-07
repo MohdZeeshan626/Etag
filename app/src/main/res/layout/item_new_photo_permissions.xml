@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdvUserImage"
+        android:layout_width="@dimen/user_image_size_chat"
+        android:layout_height="@dimen/user_image_size_chat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/ic_user_thumb"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/StyleBold"
+        android:text="John Deniel"
+        android:textColor="@color/colorHeaderTitle"
+        android:textSize="@dimen/small_text_size"
+        android:layout_marginStart="@dimen/fragment_small_margin"
+        android:layout_marginTop="@dimen/fragment_spacing"
+        app:layout_constraintStart_toEndOf="@+id/sdvUserImage"
+        app:layout_constraintTop_toTopOf="@+id/sdvUserImage"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        style="@style/StyleRegular"
+        android:layout_marginTop="@dimen/line_spacing_extra"
+        android:text="JD@gmail.com"
+        android:textColor="@color/colorHeaderTitle"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <ImageView
+        android:id="@+id/ivAction"
+        android:layout_width="@dimen/ic_verctor_image_size"
+        android:layout_height="@dimen/ic_verctor_image_size"
+        android:background="@drawable/ic_unselect"
+        android:src="@drawable/ic_down_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/sdvUserImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sdvUserImage" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height_medium"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@color/colorDividerDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sdvUserImage" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPermissionsView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackgroundBg"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view">
+
+        <com.max360group.cammax360.views.utils.CheckableLinearLayout
+            android:id="@+id/cbPermissions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fragment_medium_margin"
+            android:layout_marginTop="@dimen/fragment_medium_margin"
+            android:button="@drawable/drawable_check_box_selector"
+            android:padding="@dimen/fragment_spacing"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/ic_verctor_image_size"
+                android:layout_height="@dimen/ic_verctor_image_size"
+                android:duplicateParentState="true"
+                android:src="@drawable/drawable_check_box_selector" />
+        </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+        <TextView
+            android:id="@+id/tvAllPermissions"
+            style="@style/StyleSemiBold"
+            android:layout_marginStart="@dimen/fragment_spacing"
+            android:text="@string/st_all_permissions"
+            android:textColor="@color/colorHeaderTitle"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/cbPermissions"
+            app:layout_constraintStart_toEndOf="@+id/cbPermissions"
+            app:layout_constraintTop_toTopOf="@+id/cbPermissions" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPermissions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/fragment_spacing"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbPermissions" />
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height_medium"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/colorDividerDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

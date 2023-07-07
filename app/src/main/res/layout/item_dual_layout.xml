@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBeforeAfter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fragment_small_margin"
+        android:layout_marginVertical="@dimen/fragment_small_margin"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdvBeforeImage"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/product_image_size"
+                android:layout_marginEnd="@dimen/divider_height_medium"
+                android:scaleType="centerInside"
+                app:viewAspectRatio="1"
+                app:layout_constraintEnd_toStartOf="@+id/sdvAfterImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderImage="@color/grey"
+                app:roundedCornerRadius="@dimen/rounded_corner_radius" />
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdvAfterImage"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/product_image_size"
+                android:layout_marginStart="@dimen/divider_height_medium"
+                android:scaleType="centerInside"
+                android:visibility="visible"
+                app:viewAspectRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/sdvBeforeImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderImage="@color/grey"
+                app:roundedCornerRadius="@dimen/rounded_corner_radius" />
+
+
+            <ImageView
+                android:id="@+id/ivShareBefore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/rippleStrokeWidth"
+                android:src="@drawable/ic_share_media"
+                android:padding="@dimen/line_spacing_extra"
+                app:layout_constraintEnd_toEndOf="@+id/sdvAfterImage"
+                app:layout_constraintTop_toTopOf="@+id/sdvAfterImage" />
+
+            <ImageView
+                android:id="@+id/ivViewAfter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_view_eye"
+                android:padding="@dimen/line_spacing_extra"
+                app:layout_constraintEnd_toEndOf="@+id/ivShareBefore"
+                app:layout_constraintTop_toBottomOf="@+id/ivShareBefore" />
+
+
+            <ImageView
+                android:id="@+id/ivShareAfter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/rippleStrokeWidth"
+                android:padding="@dimen/line_spacing_extra"
+                android:src="@drawable/ic_share_media"
+                app:layout_constraintEnd_toEndOf="@+id/sdvBeforeImage"
+                app:layout_constraintTop_toTopOf="@+id/sdvBeforeImage" />
+
+            <ImageView
+                android:id="@+id/ivViewBefore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/line_spacing_extra"
+                android:src="@drawable/ic_view_eye"
+                app:layout_constraintEnd_toEndOf="@+id/ivShareAfter"
+                app:layout_constraintTop_toBottomOf="@+id/ivShareAfter" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_video"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/clContentContainer"
+            app:layout_constraintEnd_toEndOf="@id/clContentContainer"
+            app:layout_constraintStart_toStartOf="@id/clContentContainer"
+            app:layout_constraintTop_toTopOf="@id/clContentContainer" />
+
+
+        <TextView
+            android:id="@+id/tvDualImageName"
+            style="@style/StyleSemiBold"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/fragment_medium_margin"
+            android:text="James Deniel"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/colorHeaderTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:singleLine="true"
+            app:layout_constraintTop_toBottomOf="@id/clContentContainer" />
+
+        <TextView
+            android:id="@+id/tvDualUserName"
+            style="@style/StyleRegular"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/line_spacing_extra"
+            android:text="May 23rd,2021"
+            android:textColor="@color/colorDisabledText"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvDualImageName"
+            android:singleLine="true"
+            app:layout_constraintTop_toBottomOf="@id/tvDualImageName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

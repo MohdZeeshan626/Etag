@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdvImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/fragment_double_margin"
+        app:layout_constraintBottom_toTopOf="@+id/ivDone"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:placeholderImage="@color/colorSecondaryText" />
+
+    <ImageView
+        android:id="@+id/ivDone"
+        android:layout_width="@dimen/user_image_size_chat"
+        android:layout_height="@dimen/user_image_size_chat"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:src="@drawable/ic_save_image"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivGallary" />
+
+    <ImageView
+        android:id="@+id/ivEffects"
+        android:layout_width="@dimen/user_image_size_chat"
+        android:layout_height="@dimen/user_image_size_chat"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:src="@drawable/ic_editing_effects_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivDone" />
+
+    <ImageView
+        android:id="@+id/ivUpload"
+        android:layout_width="@dimen/user_image_size_chat"
+        android:layout_height="@dimen/user_image_size_chat"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:src="@drawable/ic_upload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivEffects" />
+
+    <ImageView
+        android:id="@+id/fileOpenCamera"
+        android:layout_width="@dimen/user_image_size_chat"
+        android:layout_height="@dimen/user_image_size_chat"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:src="@drawable/ic_camera_intent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivUpload" />
+
+    <LinearLayout
+        android:id="@+id/pbProgressView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fragment_vertical_margin"
+        android:background="@drawable/drawable_small_rounded_corners_solid"
+        android:backgroundTint="?attr/primaryTextColor"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingHorizontal="@dimen/fragment_small_margin"
+        android:paddingVertical="@dimen/fragment_small_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/indeterminateBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/white"/>
+
+        <TextView
+            android:id="@+id/progress_bar_message"
+            style="@style/StyleBold"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:text="@string/st_image_loading_please_wait"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

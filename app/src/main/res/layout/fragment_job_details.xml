@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDetailView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:paddingBottom="@dimen/fragment_vertical_margin">
+
+            <TextView
+                android:id="@+id/tvJobs"
+                style="@style/StyleSemiBold"
+                android:layout_width="0dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/st_jobs_details"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/colorHeaderTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/btnMenu"
+                app:layout_constraintEnd_toStartOf="@+id/btnMenu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnMenu" />
+
+            <ImageView
+                android:id="@+id/btnMenu"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:padding="@dimen/line_spacing_extra"
+                android:background="@drawable/drawable_submit_button_gradient_bg"
+                android:src="@drawable/ic_more"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/view1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/fragment_small_margin"
+                android:src="@drawable/dotted_line_view"
+                android:layerType="software"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                app:layout_constraintTop_toBottomOf="@+id/btnMenu"
+                app:layout_constraintStart_toStartOf="@+id/tvJobs"
+                app:layout_constraintEnd_toEndOf="@+id/btnMenu"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivSdvImage"
+                android:layout_width="@dimen/user_image_size_chat"
+                android:layout_height="@dimen/user_image_size_chat"
+                app:placeholderImage="@color/colorPlaceHolderImage"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:roundedCornerRadius="@dimen/rounded_corner_radius"
+                app:layout_constraintStart_toStartOf="@+id/view1"
+                app:layout_constraintTop_toBottomOf="@+id/view1"/>
+
+            <TextView
+                style="@style/StyleBold"
+                android:id="@+id/tvJobName"
+                android:layout_width="0dp"
+                tools:text="Need Plumbing"
+                android:textColor="@color/colorHeaderTitle"
+                app:layout_constraintStart_toEndOf="@+id/ivSdvImage"
+                app:layout_constraintTop_toTopOf="@+id/ivSdvImage"
+                app:layout_constraintEnd_toStartOf="@+id/ivCamera"
+                android:layout_marginEnd="@dimen/fragment_medium_margin"
+                android:singleLine="false"
+                android:layout_marginStart="@dimen/fragment_medium_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+            <TextView
+                style="@style/StyleRegular"
+                android:id="@+id/tvDate"
+                tools:text="Due : May 23rd,2021"
+                android:textColor="@color/colorDisabledText"
+                app:layout_constraintStart_toStartOf="@+id/tvJobName"
+                app:layout_constraintTop_toBottomOf="@+id/tvJobName"
+                android:layout_marginTop="@dimen/line_spacing_extra"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+            <ImageView
+                android:id="@+id/ivCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_image_pic"
+                app:layout_constraintEnd_toEndOf="@+id/view1"
+                app:layout_constraintTop_toTopOf="@+id/ivSdvImage"/>
+
+            <TextView
+                style="@style/StyleRegular"
+                android:id="@+id/tvAddress"
+                android:layout_width="0dp"
+                tools:text="13382, Elizabeth Street, New York"
+                app:layout_constraintEnd_toStartOf="@+id/ivDirection"
+                android:layout_marginEnd="@dimen/fragment_medium_margin"
+                android:textColor="@color/colorBlueTextLine"
+                android:maxLines="2"
+                app:layout_constraintStart_toStartOf="@+id/ivSdvImage"
+                app:layout_constraintTop_toBottomOf="@+id/tvDate"
+                android:layout_marginTop="@dimen/fragment_medium_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+            <ImageView
+                android:id="@+id/ivDirection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_direction"
+                app:layout_constraintEnd_toEndOf="@+id/ivCamera"
+                app:layout_constraintTop_toTopOf="@+id/tvAddress"
+                app:layout_constraintBottom_toBottomOf="@+id/tvAddress"/>
+
+            <ImageView
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/fragment_small_margin"
+                android:src="@drawable/dotted_line_view"
+                android:layerType="software"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+                app:layout_constraintStart_toStartOf="@+id/tvJobs"
+                app:layout_constraintEnd_toEndOf="@+id/btnMenu"/>
+
+            <TextView
+                style="@style/StyleSemiBold"
+                android:id="@+id/tvContributors"
+                android:text="Contributors"
+                android:textColor="@color/colorHeaderTitle"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <TextView
+                style="@style/StyleSemiBold"
+                android:id="@+id/tvSeeAllContributors"
+                android:text="@string/st_see_all"
+                android:textColor="?attr/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="@+id/tvContributors"
+                app:layout_constraintBottom_toBottomOf="@+id/tvContributors"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvContributionList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvContributors"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                style="@style/StyleRegular"
+                android:id="@+id/tvMostRecent"
+                tools:text="Most recent contribution : "
+                android:textColor="@color/colorDisabledText"
+                android:drawablePadding="@dimen/drawable_padding"
+                app:layout_constraintStart_toStartOf="@+id/tvContributors"
+                app:layout_constraintTop_toBottomOf="@+id/rvContributionList"
+                android:layout_marginTop="@dimen/fragment_medium_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                app:drawableStartCompat="@drawable/ic_star_batch"
+                app:drawableTint="?attr/primaryTextColor" />
+
+            <ImageView
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/fragment_small_margin"
+                android:src="@drawable/dotted_line_view"
+                android:layerType="software"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:layout_constraintTop_toBottomOf="@+id/tvMostRecent"
+                app:layout_constraintStart_toStartOf="@+id/tvJobs"
+                app:layout_constraintEnd_toEndOf="@+id/btnMenu"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMenuList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                android:clipToPadding="false"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clHeaderContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                app:layout_constraintTop_toBottomOf="@+id/rvMenuList" >
+
+                <TextView
+                    android:id="@+id/tvSortBy"
+                    style="@style/StyleSemiBold"
+                    android:drawableEnd="@drawable/ic_down_arrow"
+                    android:drawablePadding="@dimen/line_spacing_extra"
+                    android:text="@string/st_by_date"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/colorHeaderTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/ivGallaryLarge"
+                    app:layout_constraintTop_toTopOf="@id/ivGallaryLarge" />
+
+                <ImageView
+                    android:id="@+id/ivGallarySmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_gallary_small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/primaryTextColor" />
+
+                <ImageView
+                    android:id="@+id/ivGallaryMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fragment_medium_margin"
+                    android:src="@drawable/ic_gallary_medium"
+                    app:tint="@color/colorCheckBoxNormal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivGallarySmall"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivGallaryLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fragment_medium_margin"
+                    android:src="@drawable/ic_gallary"
+                    android:visibility="visible"
+                    app:tint="@color/colorCheckBoxNormal"
+                    app:layout_constraintEnd_toStartOf="@+id/ivGallaryMedium"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    style="@style/StyleInputEditTextLight"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:hint="@string/st_search"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:drawablePadding="@dimen/fragment_medium_margin"
+                    android:drawableStart="@drawable/ic_baseline_search_24"/>
+
+                <TextView
+                    android:id="@+id/tvTimeLineFilter"
+                    style="@style/StyleSemiBold"
+                    android:drawableEnd="@drawable/ic_down_arrow"
+                    android:drawablePadding="@dimen/line_spacing_extra"
+                    android:text="@string/st_filter"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/colorHeaderTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivTimelineFilterAsc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fragment_medium_margin"
+                    android:src="@drawable/ic_filter_up_word"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/ivGallaryMedium"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivTimelineFilterDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fragment_medium_margin"
+                    android:src="@drawable/ic_filter_down"
+                    android:visibility="gone"
+                    app:tint="@color/colorCheckBoxNormal"
+                    app:layout_constraintEnd_toStartOf="@+id/ivTimelineFilterAsc"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/rvMediaListing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:clipToPadding="false"
+                android:layout_marginTop="@dimen/fragment_spacing"
+                app:shimmer_demo_child_count="9"
+                app:shimmer_demo_grid_child_count="3"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_duration="800"
+                app:shimmer_demo_shimmer_color="?attr/primaryTextColor"
+                app:shimmer_demo_layout="@layout/grid_shimmer_view"
+                app:shimmer_demo_layout_manager_type="grid"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/clHeaderContent" />
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/rvConversationListing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:clipToPadding="false"
+                app:shimmer_demo_child_count="5"
+                app:shimmer_demo_grid_child_count="1"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_duration="800"
+                android:visibility="gone"
+                app:shimmer_demo_shimmer_color="?attr/primaryTextColor"
+                app:shimmer_demo_layout="@layout/listing_shimmer_view"
+                app:shimmer_demo_layout_manager_type="linear_vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/clHeaderContent" />
+
+            <EditText
+                android:id="@+id/etMessage"
+                style="@style/StyleInputEditTextLight"
+                android:layout_height="@dimen/default_button_height"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:hint="@string/st_enter_your_message"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColorHint="@color/colorDisabledText"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:layout_constraintTop_toBottomOf="@+id/rvConversationListing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/StyleSubmitButton"
+                android:id="@+id/btnPost"
+                android:text="@string/st_post"
+                android:layout_height="@dimen/fragment_vertical_margin"
+                app:layout_constraintBottom_toBottomOf="@id/etMessage"
+                app:layout_constraintEnd_toEndOf="@+id/etMessage"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/fragment_medium_margin"
+                app:layout_constraintTop_toTopOf="@id/etMessage" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/fabAddDocs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_floating_button"
+        android:visibility="gone"
+        android:contentDescription="@string/submit"
+        android:layout_margin="16dp" />
+
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

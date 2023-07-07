@@ -1,0 +1,959 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">CamMax360</string>
+
+    <!-- Main Fragment -->
+    <string name="we_dont_post_on_facebook">Don\'t worry, we don\'t post anything on facebook</string>
+    <string name="connect_with_facebook">Connect with Facebook</string>
+    <string name="connect_with_mobile">Connect with Mobile</string>
+    <string name="agree_to_terms_and_conditions">By tapping connect with,
+        you agree with our
+        <annotation id="0">Terms of Services</annotation> and
+        <annotation id="1">Privacy Policy</annotation>
+    </string>
+
+
+    <!-- Login Fragment -->
+    <string name="forgot_password">Forgot Password</string>
+    <string name="dont_have_an_account">Don\'t have an account?<font color="#4FD44C"><b> Register</b></font>
+       </string>
+    <string name="login">Login</string>
+
+    <!-- SignUp Fragment-->
+    <string name="upload_image">UPLOAD IMAGE</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="label_gender">Gender</string>
+    <string name="label_dob">Date of Birth</string>
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="invalid_password">Your password should contain 6–15 characters</string>
+    <string name="empty_email">Please enter your email.</string>
+    <string name="empty_password">Please enter your password.</string>
+    <string name="invalid_email">Email you have entered is not valid.</string>
+    <string name="invalid_image">Please upload your image</string>
+    <string name="invalid_gender">Please select your gender</string>
+    <string name="invalid_dob">You must be at least 18 years or above in order to use the application</string>
+    <string name="already_have_an_account">Already have an account?<font color="#4FD44C"><b> Sign in</b></font></string>
+
+
+    <!-- CountryCode DialogFragment -->
+    <string name="select_country_code">Select Country Code</string>
+
+    <!-- Miscellaneous Strings -->
+    <string name="facebook_app_id">1483052455175915</string>
+    <string name="fb_login_protocol_scheme">fb1483052455175915</string>
+    <string name="dialog">dialog</string>
+    <string name="ok">OK</string>
+    <string name="action_okay">Okay</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_internet">Please check your internet connection.</string>
+    <string name="retrofit_failure">There might be some problem please try again later.</string>
+    <string name="hint_search">Search…</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_gallery">Choose From Gallery</string>
+    <string name="session_expired">Your session is expired, please login again to continue.</string>
+    <string name="storage_permission_needed">You need to grant read/write external
+        storage permission in order to access media.
+    </string>
+    <string name="enable_storage_permission">You should enable your storage permission
+        in the settings for better experience.
+    </string>
+    <string name="location_permission_needed">You need to grant location permission in order to use the app features.
+    </string>
+    <string name="enable_location_permission">You should enable your location permission
+        in the settings for better experience.
+    </string>
+    <string name="enable_camera_permission">You should enable your camera permission
+        in the settings for better experience.
+    </string>
+    <string name="reading_contacts_permission_required">You should enable read contacts
+        permission to get recommendations from your phonebook contacts.
+    </string>
+    <string name="enable_read_contacts_permission">You should enable read contacts
+        permission in the app settings.
+    </string>
+    <string name="processing_image">Processing Image…</string>
+    <string name="share_via">Share via</string>
+
+    <string name="accept_terms_and_privacy_policy">
+        <![CDATA[Please accept Terms & Conditions and Privacy Policy]]></string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="home">Home</string>
+    <string name="terms_and_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="about_us">About Us</string>
+
+    <string name="st_forgot_password_description"><![CDATA[No worries!\n Enter your email & click on the recovery link sent to you to reset your password.]]></string>
+
+    <string name="my_contact_number_is">My contact number is</string>
+    <string name="enter_phone_number_description">We will send a text with a verification code. Message and data rates may apply.  An SMS OTP (one-time password) is a secure authorization method where a numeric code is sent to you mobile .</string>
+    <string name="btn_continue">Continue</string>
+    <string name="please_enter_verification_code">Please enter verification code</string>
+    <string name="enter_top_description">We have sent a text with a verification code. Message and data rates may apply.  An SMS OTP (one-time password) is a secure authorization method where a numeric code is sent on your mobile .</string>
+    <string name="didnot_get_otp">Didn\'t get your OTP? Resend?</string>
+    <string name="confirm">Confirm</string>
+    <string name="next">Next</string>
+    <string name="can_we_get_your_name">Can we get your name?</string>
+    <string name="can_we_get_your_dob">Can we get your date of birth?</string>
+    <string name="select">Select</string>
+    <string name="your_gender">Your gender?</string>
+    <string name="gender_you_want_to_date">Gender you want to date?</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="both">Both</string>
+    <string name="can_we_get_your_loc">Can we get your location?</string>
+    <string name="use_my_current_location">Use my current location</string>
+    <string name="want_to_see_notifications_from_us">Want to see notifications from us?</string>
+    <string name="yes_i_am_in">Yes, I\'m in</string>
+    <string name="no_i_am_good">No, I\'m good</string>
+    <string name="set_up_your_profile">Set up your profile</string>
+    <string name="country_name_code_placeholder">%1$s (%2$s)</string>
+    <string name="chats">Chats</string>
+    <string name="no_chat">No Chat</string>
+    <string name="load_earlier_messages">Load Earlier Messages</string>
+    <string name="type_message_text">Type your message…</string>
+    <string name="matches">Matches</string>
+    <string name="feeds">Feeds</string>
+    <string name="profile">Profile</string>
+    <string name="my_discovery_status">My Discovery Status</string>
+    <string name="keep_me_visible">KEEP ME VISIBLE</string>
+    <string name="dont_show">DON\'T SHOW</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="distance_unit">Distance Unit</string>
+    <string name="km">KM</string>
+    <string name="miles">MILES</string>
+    <string name="other">Other</string>
+    <string name="help_and_support"><![CDATA[Help & Support]]></string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="contact">Contact</string>
+    <string name="logout">Logout</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="congrats_its_a_match">Congrats! it\'s a match.\nSophia liked you too.</string>
+    <string name="keep_discovering">Keep Discovering</string>
+    <string name="send_message">Send Message</string>
+    <string name="discover_partner">Discover Partner</string>
+    <string name="add_photos_text">Congrats! you are all done just add some profile pictures and we are ready to go.</string>
+    <string name="at_least_2_photos_are_required">At least 2 photos required</string>
+    <string name="add_image">Add Image</string>
+    <string name="empty_country_code">Please select your country code.</string>
+    <string name="empty_phone_number">Please enter your phone number</string>
+    <string name="empty_otp">Please enter the otp</string>
+    <string name="upload">Upload</string>
+    <string name="invalid_number_of_photos">Please upload a minimum of 5 photos.</string>
+    <string name="hint_caption">Caption</string>
+    <string name="empty_first_name">Please enter your first name</string>
+    <string name="empty_dob">Please select your date of birth</string>
+    <string name="empty_location">Please select your location</string>
+    <string name="meaning_of_name">Meaning of name</string>
+    <string name="story_behind_name">Story behind your name</string>
+    <string name="height">Height</string>
+    <string name="ethnicity">Ethnicity</string>
+    <string name="dob">Date of birth</string>
+    <string name="name_age_placeholder">%1$s %2$s, %3$d</string>
+    <string name="full_name_placeholder">%1$s %2$s</string>
+    <string name="hint_name_meaning">Meaning of your name</string>
+    <string name="hint_name_story">Any story behind your name?</string>
+    <string name="your_ethnicity">Your ethnicity?</string>
+    <string name="audio_db_title_format"><xliff:g id="format">yyyy-MM-dd HH:mm:ss</xliff:g></string>
+
+
+
+    <string name="update">Update</string>
+    <string name="update_basic_info">Update Basic Info</string>
+    <string name="how_tall_are_you">How tall are you?</string>
+    <string name="hint_height">Your height in ft &amp; inches</string>
+    <string name="empty_name_meaning">Please enter meaning of your name</string>
+    <string name="empty_name_story">Please enter the story behind your name</string>
+    <string name="invalid_height">Please enter your height</string>
+    <string name="invalid_ethnicity">Please select your ethnicity</string>
+    <string name="high_school">High School</string>
+    <string name="graduate">Graduate</string>
+    <string name="post_graduate">Post Graduate</string>
+    <string name="prefer_not_to_say">Prefer not to say</string>
+    <string name="invalid_answer">Please enter/select the answer for the question</string>
+    <string name="save">Save</string>
+    <string name="discover">Discover</string>
+    <string name="no_new_user_nearby">No new user nearby.</string>
+    <string name="no_more_matches">No More Matches</string>
+    <string name="no_match">No Match</string>
+    <string name="matched_user_text">Congrats! its a match. %1$s %2$s liked you too</string>
+    <string name="age">Age</string>
+    <string name="some_college">Some College</string>
+    <string name="bachelors">Bachelors</string>
+    <string name="distance">Distance</string>
+    <string name="interested_in">I am interested in</string>
+    <string name="filter_max_range_placeholder">%1$d-%2$d+</string>
+    <string name="filter_range_placeholder">%1$d-%2$d</string>
+    <string name="country_phone_number_placeholder">%1$s %2$s%3$s</string>
+    <string name="height_placeholder"> %1$s ft</string>
+    <string name="default_country_code">+91</string>
+    <string name="default_country">United States</string>
+    <string name="enable_camera_capture_permission">You should enable all the permissions
+        in the settings for better experience.</string>
+
+    <!-- String array -->
+    <!-- Ethnicity Array -->
+    <string-array name="ethnicity_array">
+        <item name="american_indian">American Indian</item>
+        <item name="african_descent">Black/African Descent</item>
+        <item name="east_asian">East Asian</item>
+        <item name="latino">Hispanic/latino</item>
+        <item name="middle_eastern">Middle Eastern</item>
+        <item name="pacific_islander">Pacific Islander</item>
+        <item name="south_asian">South Asian</item>
+        <item name="white">Whit/Caucasian</item>
+        <item name="other">Other</item>
+        <item name="prefer_not_to_say">Prefer Not to Say</item>
+    </string-array>
+
+    <!-- Religious Belief Array -->
+    <string-array name="religious_belief_array">
+        <item name="agnostic">Agnostic</item>
+        <item name="atheist">Atheist</item>
+        <item name="buddhist">Buddhish</item>
+        <item name="christian">Christian</item>
+        <item name="hindu">Hindu</item>
+        <item name="jain">Jain</item>
+        <item name="jewish">Jewish</item>
+        <item name="muslim">Muslim</item>
+        <item name="zoroastrian">Zoroastrian</item>
+        <item name="sikh">Sikh</item>
+        <item name="spiritual">Spiritual</item>
+        <item name="other">Other</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- update dialog -->
+    <string name="new_update_avilable">New Update Available</string>
+    <string name="update_message">New Update of available. Please Update</string>
+    <string name="no_thanks">NO,THANKS</string>
+    <string name="st_sign_in_to_your_account">Sign in to your\naccount</string>
+    <string name="st_enter_your_login_credentials">Enter your login credentials</string>
+    <string name="st_forgot_password">Forgot Password?</string>
+    <string name="st_sign_in">Sign In</string>
+    <string name="st_sign_up_to_create_account">Sign up to create\naccount</string>
+    <string name="st_enter_your_sign_up_credentials">Enter your sign up credentials</string>
+    <string name="st_confirm_password">Confirm password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="navigation_drawer_open">st_open</string>
+    <string name="drawer_close">close</string>
+    <string name="st_dashboard">Dashboard</string>
+    <string name="st_account">Accounts</string>
+    <string name="st_users">Users</string>
+    <string name="st_owners">Owners</string>
+    <string name="st_units">Units</string>
+    <string name="st_properties">Properties</string>
+    <string name="st_photos">Photos</string>
+    <string name="st_videos">Videos</string>
+    <string name="st_residents">Residents</string>
+    <string name="st_view_profile">View Profile</string>
+    <string name="st_jobs">Jobs</string>
+    <string name="st_new_job">New Job</string>
+    <string name="st_due_date">Due Date</string>
+    <string name="st_create_new_job">Create New Job</string>
+    <string name="st_save">Save</string>
+    <string name="st_job_title">Job Title</string>
+    <string name="st_job_address">Job Address</string>
+    <string name="st_job_state">State</string>
+    <string name="st_city">City</string>
+    <string name="st_start_date">Start Date</string>
+    <string name="st_end_date">End Date</string>
+    <string name="st_invite_new">Invite New</string>
+    <string name="st_add_members">Add Members</string>
+    <string name="st_current_members">Current Members</string>
+    <string name="st_permissions">Permissions</string>
+    <string name="st_delete">Delete</string>
+    <string name="st_jobs_details">Job Details</string>
+    <string name="st_vy_contributor">By Contributor</string>
+    <string name="st_search">Search...</string>
+    <string name="st_upgrade_plan">Upgrade Plan</string>
+    <string name="st_change_password">Change Password</string>
+    <string name="st_save_changes">Save Changes</string>
+    <string name="st_phone_no">Phone No. : </string>
+    <string name="st_type">Type : </string>
+    <string name="st_status">"Status : "</string>
+    <string name="st_view_details">View Details</string>
+    <string name="st_edit_permission">Edit Permissions</string>
+    <string name="st_address">Address</string>
+    <string name="st_select_colour_theme_for_your_account">Select Colour Theme For Your Account</string>
+    <string name="st_members">Members</string>
+    <string name="st_add_selected_members">Add Selected Members</string>
+    <string name="st_invite_members">Invite Members</string>
+    <string name="st_all">All</string>
+    <string name="st_view">View</string>
+    <string name="st_edit">Edit</string>
+    <string name="st_add">Add</string>
+    <string name="st_time_line">Time Line</string>
+    <string name="st_media_photo">Media (Photos/Videos)</string>
+    <string name="st_documents">Documents</string>
+    <string name="st_conversation">Conversations</string>
+    <string name="st_notes">Notes</string>
+    <string name="st_Comments">Comments</string>
+    <string name="st_job_permissions">Job Permissions</string>
+    <string name="st_save_as_new_role">Save As New Role</string>
+    <string name="st_member_name">Member Name</string>
+    <string name="st_member_email">Member Email</string>
+    <string name="st_invite_member">Invite Member</string>
+    <string name="st_enter_your_comment">Enter your comment</string>
+    <string name="st_post">Post</string>
+    <string name="st_before">Before Photo</string>
+    <string name="st_after">After Photo</string>
+    <string name="st_photo_details_permissions"><![CDATA[Photo Details & Permissions]]></string>
+    <string name="st_all_permissions">All Permissions</string>
+    <string name="st_confirm_location">Confirm</string>
+    <string name="st_upload">Upload</string>
+    <string name="st_normal_photo">Normal photo</string>
+    <string name="st_before_after_Photo">Before And After Photo</string>
+    <string name="empty_last_name">Please enter your last name</string>
+    <string name="invalid_confirm_password">Confirm password not match with your password.</string>
+    <string name="submit">Submit</string>
+    <string name="st_invite_new_members">Invite New Members</string>
+    <string name="st_job_level_permissions">Job Level Permissions</string>
+    <string name="st_job_timing">Job timings</string>
+    <string name="st_select_start_date">Select start date</string>
+    <string name="st_video">Video</string>
+    <string name="st_camera">Camera</string>
+    <string name="st_image">Image</string>
+    <string name="empty_start_date">Please add start date</string>
+    <string name="empty_end_date">Please add end date</string>
+    <string name="st_due">Due: </string>
+    <string name="st_no_jobs_found">No jobs found..!</string>
+    <string name="label_role_name">Role name</string>
+    <string name="st_new_role">New Role</string>
+    <string name="empty_role_name">Please enter role name</string>
+    <string name="st_select_role">Select role</string>
+    <string name="et_empty_member_name">Please enter member name</string>
+    <string name="et_empty_member_email">Please enter member email</string>
+    <string name="invite_your_self">Sorry, you cannot invite youself for a job</string>
+    <string name="st_media_detail">Media Details</string>
+    <string name="label_photo_name">Photo name</string>
+    <string name="label_tags">Tags</string>
+    <string name="st_add_tags">Please add tags.</string>
+    <string name="st_click_to_add">Click to add:</string>
+    <string name="st_photo_visibility">Photo Visibility</string>
+    <string name="st_empty_tags">Please add tags</string>
+    <string name="st_image_selection_limit">You can select only 5 images in one time</string>
+    <string name="st_video_limit">You can select 5 videos in one time</string>
+    <string name="st_most_recent_contribution">Most recent contribution : </string>
+    <string name="st_job_member_description"><![CDATA[Job Member & Description]]></string>
+    <string name="st_delete_job">Delete Job</string>
+    <string name="st_search_job">Search jobs...</string>
+    <string name="st_document_visibility">Document Visibility</string>
+    <string name="st_by_date">By Date</string>
+    <string name="unable_to_load_file">Unable to load file</string>
+    <string name="st_select_a_file_to_upload">Select a file to uplaod</string>
+    <string name="st_please_install_file_manager">Please install file manager</string>
+    <string name="st_enter_your_message">Type your message</string>
+    <string name="empty_message">Please enter your message</string>
+    <string name="st_update_changes">Update Changes</string>
+    <string name="st_media_visibility">Media Visibility</string>
+    <string name="delete_confirmation">Delete Confirmation</string>
+    <string name="st_delete_job_message">Are you sure delete this job.</string>
+    <string name="st_delete_media_message">Are you sure delete this </string>
+    <string name="st_edit_profile">Edit Profile</string>
+    <string name="st_old_password">Old Password</string>
+    <string name="st_new_password">New Password</string>
+    <string name="empty_old_password">Enter  old password</string>
+    <string name="empty_new_password">Enter new password</string>
+    <string name="st_phone_number">Phone number</string>
+    <string name="st_basic">\" Basic\"</string>
+    <string name="st_super_admin">Super Admin</string>
+    <string name="st_admin">Admin</string>
+    <string name="st_owner">Owner</string>
+    <string name="st_user">User</string>
+    <string name="st_see_all">See All</string>
+    <string name="st_contributors">Contributors</string>
+    <string name="st_edit_members">Edit Members</string>
+    <string name="st_edit_job_detail">Edit Job Details</string>
+    <string name="st_job_edit">Job Edit</string>
+    <string name="st_map">Map</string>
+    <string name="st_save_job">Save Job</string>
+    <string name="st_delete_member_message">Are you sure delete this member.</string>
+    <string name="st_time_line_filter">Timeline Filters</string>
+    <string name="st_date_range">Date Range</string>
+    <string name="st_items">Items</string>
+    <string name="st_user_update">User Updates</string>
+    <string name="media">Media</string>
+    <string name="st_invitations">Invitations</string>
+    <string name="st_terminations">Terminations</string>
+    <string name="st_filter">Filter</string>
+    <string name="st_left_note">&#160;left new entry in notes.</string>
+    <string name="st_conversation_left">&#160;left new entry in conversations.</string>
+    <string name="st_comments_left">&#160;left new entry in comments.</string>
+    <string name="st_create_job">&#160;created a job.</string>
+    <string name="st_job_info_edited">Job info edited.</string>
+    <string name="st_added_simple_photo">&#160;added a simple photo.</string>
+    <string name="st_added_video">&#160;added a video.</string>
+    <string name="st_added_dual_photo">&#160;added dual photo.</string>
+    <string name="st_left_new_entry_in_comment">&#160;left new entry in comment.</string>
+    <string name="st_added_document">&#160;added document.</string>
+    <string name="st_edited_the_job_detail">&#160;edited the job details.</string>
+    <string name="st_edited_the_photo_detail">&#160;edited info of the photo.</string>
+    <string name="st_edited_the_video_detail">&#160;edited info of the video.</string>
+    <string name="st_edited_the_document_detail">&#160;edited info of the document.</string>
+    <string name="st_edited_permissions_of_member">&#160;edited permission of the member&#160;</string>
+    <string name="st_deleted_photo">&#160;deleted a photo.</string>
+    <string name="st_deleted_dual_photo">&#160;deleted dual photo</string>
+    <string name="st_deleted_video">&#160;deleted video.</string>
+    <string name="st_deleted_document">&#160;deleted document</string>
+    <string name="st_added_member">&#160;added the member&#160;</string>
+    <string name="st_remove_member">&#160;remove the member&#160;</string>
+    <string name="st_accept_invitation">&#160;accept invitation.</string>
+    <string name="st_invite">&#160;invited the member&#160;</string>
+    <string name="st_edit_photo_permission">&#160;edited member permission of the Photo</string>
+    <string name="st_edit_video_permission">&#160;edited member permission of the video</string>
+    <string name="st_edit_doc_permission">&#160;edited member permission of the document</string>
+
+
+    <string name="label_brush">Brush</string>
+    <string name="label_shape">Shape</string>
+    <string name="label_oval">Oval</string>
+    <string name="label_rectangle">Rectangle</string>
+    <string name="label_line">Line</string>
+    <string name="label_emoji">Emoji</string>
+    <string name="label_sticker">Sticker</string>
+    <string name="label_eraser">Eraser</string>
+    <string name="label_eraser_mode">Eraser Mode</string>
+    <string name="label_text">Text</string>
+    <string name="label_filter">Filter</string>
+    <string name="label_adjust">Adjust</string>
+    <string name="msg_save_image">Are you want to exit without saving image ?</string>
+    <string name="app_intent_name">PhotoEditor</string>
+    <string name="msg_save_image_to_share">Please save image to share</string>
+    <string name="msg_share_image">Share Image</string>
+    <string name="st_Jobs">Jobs</string>
+    <string name="st_no_event">No event found on this date</string>
+    <string name="st_skip">Skip</string>
+    <string name="password_incorrect">Incorrect password</string>
+    <string name="st_online">You are online now.</string>
+    <string name="st_offline">Sorry, you are offline.</string>
+    <string name="st_new_owner">New Owner</string>
+    <string name="st_tax_id">Tax ID</string>
+    <string name="st_create_owner">Create Owner</string>
+    <string name="st_comments">Comments</string>
+    <string name="st_emails">Emails</string>
+    <string name="st_add_new_email">Add Email</string>
+    <string name="st_general_info">General info</string>
+    <string name="st_type_level">Type</string>
+    <string name="st_email_require">Email<font color="#FF1931"><b> *</b></font></string>
+    <string name="st_first_name_require">First Name<font color="#FF1931"><b> *</b></font></string>
+    <string name="st_last_name_require">Last Name<font color="#FF1931"><b> *</b></font></string>
+    <string name="st_phone_numbers">Phone Numbers</string>
+    <string name="st_add_phone">Add Phone</string>
+    <string name="st_name">Name</string>
+    <string name="st_phone">Phone No.</string>
+    <string name="st_ex">Ex</string>
+    <string name="st_default">Default</string>
+    <string name="st_text_message">Text Message</string>
+    <string name="st_add_address" >Add Address</string>
+    <string name="st_Address">Address</string>
+    <string name="st_primary_address">Primary Address</string>
+    <string name="st_add_property">Add Property</string>
+    <string name="st_units_obtained">Units Obtained</string>
+    <string name="st_display_name">Display Name<font color="#FF1931"><b> *</b></font></string>
+    <string name="st_location">Location</string>
+    <string name="st_address_name">Address Name</string>
+    <string name="st_building_house">Building/House Number</string>
+    <string name="st_street_address">Street Address</string>
+    <string name="st_postal_zip_code">Postal/Zip Code</string>
+    <string name="st_landmark">Landmark</string>
+    <string name="st_add_new_property">Add New Property</string>
+    <string name="st_select_property">Select Property</string>
+    <string name="st_add_new_unit">Add New Unit</string>
+    <string name="st_select_unit">Select unit</string>
+    <string name="st_edit_details">Edit Details</string>
+    <string name="st_send_invite">Send Invite</string>
+    <string name="empty_primary_email">Please enter primary email</string>
+    <string name="empty_primary_address">Please add your primary address</string>
+    <string name="empty_billing_address">Please add your billing address</string>
+    <string name="empty_profile">Please add image</string>
+    <string name="empty_rms">Please enter Rm</string>
+    <string name="st_new_property">New Property</string>
+    <string name="st_create_property">Create Property</string>
+    <string name="st_property_name">Property Name<font color="#FF1931"><b> *</b></font></string>
+    <string name="st_short_name">Short Name<font color="#FF1931"><b> *</b></font></string>
+    <string name="st_total_sq_fit">Total sq. ft</string>
+    <string name="st_property_type_label">Property Type<font color="#FF1931"><b> *</b></font></string>
+    <string name="st_add_owner">Add Owner</string>
+    <string name="st_charge_type_label">Charge Type<font color="#FF1931"><b> *</b></font></string>
+    <string name="st_note_history"><![CDATA[Notes & History]]></string>
+    <string name="st_access">Access</string>
+    <string name="st_integrations">Integrations</string>
+    <string name="st_unit_name">Unit Name<font color="#FF1931"><b> *</b></font></string>
+    <string name="st_name_require">Name<font color="#FF1931"><b> *</b></font></string>
+    <string name="st_delete_owner_message">Are you sure delete this owner.</string>
+    <string name="st_add_existing">Add Existing</string>
+    <string name="st_send">Send</string>
+    <string name="st_create_unit">Create Unit</string>
+    <string name="st_bathroom">Bathrooms</string>
+    <string name="st_bedroom">Bedrooms</string>
+    <string name="st_no_owner_found">No owner found</string>
+    <string name="st_save_invite"><![CDATA[Save & Invite]]></string>
+    <string name="st_add_unit">Add Unit</string>
+    <string name="empty_tax_id">Please enter Tax Id</string>
+    <string name="empty_comment">Please enter comment</string>
+    <string name="st_send_invite_desc">Generate and send platform invite link to the user.</string>
+    <string name="confirm_create"><![CDATA[Confirm & Create]]></string>
+    <string name="st_search_owner">Search owner</string>
+    <string name="st_month">Month</string>
+    <string name="st_day">Day</string>
+    <string name="Events">Events</string>
+    <string name="st_back">Back</string>
+    <string name="st_next">Next</string>
+    <string name="st_weekly">Weekly</string>
+    <string name="st_job_start_time">Job start time</string>
+    <string name="empty_unit_name">Please enter unit name</string>
+    <string name="empty_unit_type">Please select unit type</string>
+    <string name="st_type_is_already_added">This type is already added</string>
+    <string name="st_property_already_added">This property is already added</string>
+    <string name="st_charge_already_added">This charge is already added</string>
+    <string name="st_select_owner">Select Owner</string>
+    <string name="st_owner_already_added">This owner is already added</string>
+    <string name="empty_property_name">Please enter property name</string>
+    <string name="empty_property_type">Please select property type</string>
+    <string name="empty_charge_type">Please select charge type</string>
+    <string name="st_active">Active</string>
+    <string name="_st_inactive">InActive</string>
+    <string name="st_no_property_found">No property found</string>
+    <string name="empty_short_name">Please enter short name</string>
+    <string name="st_delete_property_message">Are you sure delete this property</string>
+    <string name="st_search_property">Search property...</string>
+    <string name="st_delete_unit_message">Are you sure delete this unit</string>
+    <string name="st_update_owner">Update Owner</string>
+    <string name="st_update_property">Update Property</string>
+    <string name="st_update_unit">Update Unit</string>
+    <string name="st_unit_type_level">Unit Type<font color="#FF1931"><b> *</b></font></string>
+    <string name="empty_unit_image">Please add unit image</string>
+    <string name="empty_property_image">Please add property image</string>
+    <string name="st_empty_property">Please select property</string>
+    <string name="st_primary">Primary</string>
+    <string name="st_billing">Billing</string>
+    <string name="st_notifications">Notifications</string>
+    <string name="st_reject">Reject</string>
+    <string name="st_accept">Accept</string>
+    <string name="st_notifications_not_found">Notifications not found</string>
+    <string name="st_invite_you_to_job">invite you to the job:</string>
+    <string name="st_create_new_job_notification">create a new job:</string>
+    <string name="st_added_photo">added a simple photo:</string>
+    <string name="st_added_dula_photo_notification">added a dual photo:</string>
+    <string name="st_added_video_notification">added a video:</string>
+    <string name="st_added_document_notification">added a document:</string>
+    <string name="st_added_comment">added a comment:</string>
+    <string name="st_added_note">added a note:</string>
+    <string name="st_added_conversation">added a conversation:</string>
+    <string name="st_edit_job_detail_notification">edit job detail</string>
+    <string name="st_add_new">Add new</string>
+    <string name="st_invalid_address">Sorry..! Address is not valid please try with another location</string>
+    <string name="st_image_loading_please_wait">Image loading please wait..</string>
+
+    <string-array name="photo_editor_emoji">
+
+        <!-- Smiles -->
+        <item>u+1f604</item>
+        <item>u+1f603</item>
+        <item>u+1f600</item>
+        <item>u+1f60a</item>
+        <item>u+263a</item>
+        <item>u+1f609</item>
+        <item>u+1f60d</item>
+        <item>u+1f618</item>
+        <item>u+1f61a</item>
+        <item>u+1f617</item>
+        <item>u+1f619</item>
+        <item>u+1f61c</item>
+        <item>u+1f61d</item>
+        <item>u+1f61b</item>
+        <item>u+1f633</item>
+        <item>u+1f601</item>
+        <item>u+1f614</item>
+        <item>u+1f60c</item>
+        <item>u+1f612</item>
+        <item>u+1f61e</item>
+        <item>u+1f623</item>
+        <item>u+1f622</item>
+        <item>u+1f602</item>
+        <item>u+1f62d</item>
+        <item>u+1f62a</item>
+        <item>u+1f625</item>
+        <item>u+1f630</item>
+        <item>u+1f605</item>
+        <item>u+1f613</item>
+        <item>u+1f629</item>
+        <item>u+1f62b</item>
+        <item>u+1f628</item>
+        <item>u+1f631</item>
+        <item>u+1f620</item>
+        <item>u+1f621</item>
+        <item>u+1f624</item>
+
+        <!--People -->
+        <item>u+1f616</item>
+        <item>u+1f606</item>
+        <item>u+1f60b</item>
+        <item>u+1f637</item>
+        <item>u+1f60e</item>
+        <item>u+1f634</item>
+        <item>u+1f635</item>
+        <item>u+1f632</item>
+        <item>u+1f61f</item>
+        <item>u+1f626</item>
+        <item>u+1f627</item>
+        <item>u+1f608</item>
+        <item>u+1f47f</item>
+        <item>u+1f62e</item>
+        <item>u+1f62c</item>
+        <item>u+1f610</item>
+        <item>u+1f615</item>
+        <item>u+1f62f</item>
+        <item>u+1f636</item>
+        <item>u+1f607</item>
+        <item>u+1f60f</item>
+        <item>u+1f611</item>
+        <item>u+1f472</item>
+        <item>u+1f473</item>
+        <item>u+1f46e</item>
+        <item>u+1f477</item>
+        <item>u+1f482</item>
+        <item>u+1f476</item>
+        <item>u+1f466</item>
+        <item>u+1f467</item>
+        <item>u+1f468</item>
+        <item>u+1f469</item>
+        <item>u+1f474</item>
+        <item>u+1f475</item>
+        <item>u+1f471</item>
+        <item>u+1f47c</item>
+        <item>u+1f478</item>
+        <item>u+1f63a</item>
+        <item>u+1f638</item>
+        <item>u+1f63b</item>
+        <item>u+1f63d</item>
+        <item>u+1f63c</item>
+        <item>u+1f640</item>
+        <item>u+1f63f</item>
+        <item>u+1f639</item>
+        <item>u+1f63e</item>
+        <item>u+1f479</item>
+        <item>u+1f47a</item>
+        <item>u+1f648</item>
+        <item>u+1f649</item>
+        <item>u+1f64a</item>
+        <item>u+1f480</item>
+        <item>u+1f47d</item>
+        <item>u+1f4a9</item>
+        <item>u+1f525</item>
+        <item>u+2728</item>
+        <item>u+1f31f</item>
+        <item>u+1f4ab</item>
+        <item>u+1f4a5</item>
+        <item>u+1f4a2</item>
+        <item>u+1f4a6</item>
+        <item>u+1f4a7</item>
+        <item>u+1f4a4</item>
+        <item>u+1f4a8</item>
+        <item>u+1f442</item>
+        <item>u+1f440</item>
+        <item>u+1f443</item>
+        <item>u+1f445</item>
+        <item>u+1f444</item>
+        <item>u+1f44d</item>
+        <item>u+1f44e</item>
+        <item>u+1f44c</item>
+        <item>u+1f44a</item>
+        <item>u+270a</item>
+        <item>u+270c</item>
+        <item>u+1f44b</item>
+        <item>u+270b</item>
+        <item>u+1f450</item>
+        <item>u+1f446</item>
+        <item>u+1f447</item>
+        <item>u+1f449</item>
+        <item>u+1f448</item>
+        <item>u+1f64c</item>
+        <item>u+1f64f</item>
+        <item>u+261d</item>
+        <item>u+1f44f</item>
+        <item>u+1f4aa</item>
+        <item>u+1f6b6</item>
+        <item>u+1f3c3</item>
+        <item>u+1f483</item>
+        <item>u+1f46b</item>
+        <item>u+1f46a</item>
+        <item>u+1f46c</item>
+        <item>u+1f46d</item>
+        <item>u+1f48f</item>
+        <item>u+1f491</item>
+        <item>u+1f46f</item>
+        <item>u+1f646</item>
+        <item>u+1f645</item>
+        <item>u+1f481</item>
+        <item>u+1f64b</item>
+        <item>u+1f486</item>
+        <item>u+1f487</item>
+        <item>u+1f485</item>
+        <item>u+1f470</item>
+        <item>u+1f64e</item>
+        <item>u+1f64d</item>
+        <item>u+1f647</item>
+        <item>u+1f3a9</item>
+        <item>u+1f451</item>
+        <item>u+1f452</item>
+        <item>u+1f45f</item>
+        <item>u+1f45e</item>
+        <item>u+1f461</item>
+        <item>u+1f460</item>
+        <item>u+1f462</item>
+        <item>u+1f455</item>
+        <item>u+1f454</item>
+        <item>u+1f45a</item>
+        <item>u+1f457</item>
+        <item>u+1f3bd</item>
+        <item>u+1f456</item>
+        <item>u+1f458</item>
+        <item>u+1f459</item>
+        <item>u+1f4bc</item>
+        <item>u+1f45c</item>
+        <item>u+1f45d</item>
+        <item>u+1f45b</item>
+        <item>u+1f453</item>
+        <item>u+1f380</item>
+        <item>u+1f302</item>
+        <item>u+1f484</item>
+        <item>u+1f49b</item>
+        <item>u+1f499</item>
+        <item>u+1f49c</item>
+        <item>u+1f49a</item>
+        <item>u+2764</item>
+        <item>u+1f494</item>
+        <item>u+1f497</item>
+        <item>u+1f493</item>
+        <item>u+1f495</item>
+        <item>u+1f496</item>
+        <item>u+1f49e</item>
+        <item>u+1f498</item>
+        <item>u+1f48c</item>
+        <item>u+1f48b</item>
+        <item>u+1f48d</item>
+        <item>u+1f48e</item>
+        <item>u+1f464</item>
+        <item>u+1f465</item>
+        <item>u+1f4ac</item>
+        <item>u+1f463</item>
+        <item>u+1f4ad</item>
+
+        <!--  Nature-->
+        <item>u+1f436</item>
+        <item>u+1f43a</item>
+        <item>u+1f431</item>
+        <item>u+1f42d</item>
+        <item>u+1f439</item>
+        <item>u+1f430</item>
+        <item>u+1f438</item>
+        <item>u+1f42f</item>
+        <item>u+1f428</item>
+        <item>u+1f43b</item>
+        <item>u+1f437</item>
+        <item>u+1f43d</item>
+        <item>u+1f42e</item>
+        <item>u+1f417</item>
+        <item>u+1f435</item>
+        <item>u+1f412</item>
+        <item>u+1f434</item>
+        <item>u+1f411</item>
+        <item>u+1f418</item>
+        <item>u+1f43c</item>
+        <item>u+1f427</item>
+        <item>u+1f426</item>
+        <item>u+1f424</item>
+        <item>u+1f425</item>
+        <item>u+1f423</item>
+        <item>u+1f414</item>
+        <item>u+1f40d</item>
+        <item>u+1f422</item>
+        <item>u+1f41b</item>
+        <item>u+1f41d</item>
+        <item>u+1f41c</item>
+        <item>u+1f41e</item>
+        <item>u+1f40c</item>
+        <item>u+1f419</item>
+        <item>u+1f41a</item>
+        <item>u+1f420</item>
+        <item>u+1f41f</item>
+        <item>u+1f42c</item>
+        <item>u+1f433</item>
+        <item>u+1f40b</item>
+        <item>u+1f404</item>
+        <item>u+1f40f</item>
+        <item>u+1f400</item>
+        <item>u+1f403</item>
+        <item>u+1f405</item>
+        <item>u+1f407</item>
+        <item>u+1f409</item>
+        <item>u+1f40e</item>
+        <item>u+1f410</item>
+        <item>u+1f413</item>
+        <item>u+1f415</item>
+        <item>u+1f416</item>
+        <item>u+1f401</item>
+        <item>u+1f402</item>
+        <item>u+1f432</item>
+        <item>u+1f421</item>
+        <item>u+1f40a</item>
+        <item>u+1f42b</item>
+        <item>u+1f42a</item>
+        <item>u+1f406</item>
+        <item>u+1f408</item>
+        <item>u+1f429</item>
+        <item>u+1f43e</item>
+        <item>u+1f490</item>
+        <item>u+1f338</item>
+        <item>u+1f337</item>
+        <item>u+1f340</item>
+        <item>u+1f339</item>
+        <item>u+1f33b</item>
+        <item>u+1f33a</item>
+        <item>u+1f341</item>
+        <item>u+1f343</item>
+        <item>u+1f342</item>
+        <item>u+1f33f</item>
+        <item>u+1f33e</item>
+        <item>u+1f344</item>
+        <item>u+1f335</item>
+        <item>u+1f334</item>
+        <item>u+1f332</item>
+        <item>u+1f333</item>
+        <item>u+1f330</item>
+        <item>u+1f331</item>
+        <item>u+1f33c</item>
+        <item>u+1f310</item>
+        <item>u+1f31e</item>
+        <item>u+1f31d</item>
+        <item>u+1f31a</item>
+        <item>u+1f311</item>
+        <item>u+1f312</item>
+        <item>u+1f313</item>
+        <item>u+1f314</item>
+        <item>u+1f315</item>
+        <item>u+1f316</item>
+        <item>u+1f317</item>
+        <item>u+1f318</item>
+        <item>u+1f31c</item>
+        <item>u+1f31b</item>
+        <item>u+1f319</item>
+        <item>u+1f30d</item>
+        <item>u+1f30e</item>
+        <item>u+1f30f</item>
+        <item>u+1f30b</item>
+        <item>u+1f30c</item>
+        <item>u+1f320</item>
+        <item>u+2b50</item>
+        <item>u+2600</item>
+        <item>u+26c5</item>
+        <item>u+2601</item>
+        <item>u+26a1</item>
+        <item>u+2614</item>
+        <item>u+2744</item>
+        <item>u+26c4</item>
+        <item>u+1f300</item>
+        <item>u+1f301</item>
+        <item>u+1f308</item>
+        <item>u+1f30a</item>
+
+        <!--Places-->
+        <item>u+1f3e0</item>
+        <item>u+1f3e1</item>
+        <item>u+1f3eb</item>
+        <item>u+1f3e2</item>
+        <item>u+1f3e3</item>
+        <item>u+1f3e5</item>
+        <item>u+1f3e6</item>
+        <item>u+1f3ea</item>
+        <item>u+1f3e9</item>
+        <item>u+1f3e8</item>
+        <item>u+1f492</item>
+        <item>u+26ea</item>
+        <item>u+1f3ec</item>
+        <item>u+1f3e4</item>
+        <item>u+1f307</item>
+        <item>u+1f306</item>
+        <item>u+1f3ef</item>
+        <item>u+1f3f0</item>
+        <item>u+26fa</item>
+        <item>u+1f3ed</item>
+        <item>u+1f5fc</item>
+        <item>u+1f5fe</item>
+        <item>u+1f5fb</item>
+        <item>u+1f304</item>
+        <item>u+1f305</item>
+        <item>u+1f303</item>
+        <item>u+1f5fd</item>
+        <item>u+1f309</item>
+        <item>u+1f3a0</item>
+        <item>u+1f3a1</item>
+        <item>u+26f2</item>
+        <item>u+1f3a2</item>
+        <item>u+1f6a2</item>
+        <item>u+26f5</item>
+        <item>u+1f6a4</item>
+        <item>u+1f6a3</item>
+        <item>u+2693</item>
+        <item>u+1f680</item>
+        <item>u+2708</item>
+        <item>u+1f4ba</item>
+        <item>u+1f681</item>
+        <item>u+1f682</item>
+        <item>u+1f68a</item>
+        <item>u+1f689</item>
+        <item>u+1f69e</item>
+        <item>u+1f686</item>
+        <item>u+1f684</item>
+        <item>u+1f685</item>
+        <item>u+1f688</item>
+        <item>u+1f687</item>
+        <item>u+1f69d</item>
+        <item>u+1f68b</item>
+        <item>u+1f683</item>
+        <item>u+1f68e</item>
+        <item>u+1f68c</item>
+        <item>u+1f68d</item>
+        <item>u+1f699</item>
+        <item>u+1f698</item>
+        <item>u+1f697</item>
+        <item>u+1f695</item>
+        <item>u+1f696</item>
+        <item>u+1f69b</item>
+        <item>u+1f69a</item>
+        <item>u+1f6a8</item>
+        <item>u+1f693</item>
+        <item>u+1f694</item>
+        <item>u+1f692</item>
+        <item>u+1f691</item>
+        <item>u+1f690</item>
+        <item>u+1f6b2</item>
+        <item>u+1f6a1</item>
+        <item>u+1f69f</item>
+        <item>u+1f6a0</item>
+        <item>u+1f69c</item>
+        <item>u+1f488</item>
+        <item>u+1f68f</item>
+        <item>u+1f3ab</item>
+        <item>u+1f6a6</item>
+        <item>u+1f6a5</item>
+        <item>u+26a0</item>
+        <item>u+1f6a7</item>
+        <item>u+1f530</item>
+        <item>u+26fd</item>
+        <item>u+1f3ee</item>
+        <item>u+1f3b0</item>
+        <item>u+2668</item>
+        <item>u+1f5ff</item>
+        <item>u+1f3aa</item>
+        <item>u+1f3ad</item>
+        <item>u+1f4cd</item>
+        <item>u+1f6a9</item>
+    </string-array>
+</resources>

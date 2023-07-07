@@ -1,0 +1,252 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+/*
+apply plugin: 'kotlin-android-extensions'
+*/
+
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
+
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+apply plugin: 'com.google.gms.google-services'
+
+apply plugin: 'com.google.firebase.crashlytics'
+
+def configuration = rootProject.ext.configuration
+def libraries = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion configuration.compileSdkVersion
+    defaultConfig {
+        applicationId configuration.packageName
+        minSdkVersion configuration.minSdkVersion
+        targetSdkVersion configuration.targetSdkVersion
+        versionCode configuration.versionCode
+        versionName configuration.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        renderscriptTargetApi 21
+        renderscriptSupportModeEnabled true
+
+        ndk {
+            abiFilters "armeabi-v7a", "x86", "armeabi", "mips"
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.incremental":"true"]
+            }
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    configurations.all {
+        resolutionStrategy {
+            force 'androidx.core:core-ktx:1.6.0'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation "junit:junit:${libraries.jUnit}"
+    androidTestImplementation "androidx.test:runner:${libraries.testRunner}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${libraries.testEspresso}"
+
+    // Kotlin and support libraries
+    /*implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"*/
+    implementation "androidx.appcompat:appcompat:${libraries.appCompat}"
+    implementation "androidx.constraintlayout:constraintlayout:${libraries.constraintLayout}"
+    implementation  "org.jetbrains.kotlinx:kotlinx-coroutines-core:${libraries.coroutines}"
+
+
+    // Architecture Components
+    implementation "androidx.lifecycle:lifecycle-extensions:${libraries.architectureComponents}"
+    implementation "androidx.lifecycle:lifecycle-common-java8:${libraries.architectureComponents}"
+
+    // Core android KTX
+    implementation "androidx.core:core-ktx:1.7.0"
+    implementation "androidx.fragment:fragment-ktx:${libraries.androidXFragmentKTX}"
+
+//    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+    // Android Support Design
+    implementation("com.google.android.material:material:${libraries.googleAndroidMaterial}") {
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+    }
+
+    // RecyclerView
+    implementation("androidx.recyclerview:recyclerview:${libraries.recylerView}") {
+        exclude module: 'support-v4'
+    }
+
+    // CardView
+    implementation("androidx.cardview:cardview:${libraries.cardView}") {
+        exclude module: 'support-v4'
+    }
+
+    // Fresco for Image Loading
+    implementation("com.facebook.fresco:fresco:${libraries.fresco}") {
+        exclude module: 'support-v4'
+    }
+    implementation("com.facebook.fresco:animated-gif:${libraries.fresco}") {
+        exclude module: 'support-v4'
+    }
+
+    // Retrofit for making Network Connections
+    implementation "com.squareup.retrofit2:retrofit:${libraries.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${libraries.retrofit}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${libraries.retrofit}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${libraries.okHttpLoginInterceptor}"
+
+    // RxJava and RxAndroid for reactive programming
+    implementation "io.reactivex.rxjava2:rxjava:${libraries.rxJava}"
+    implementation "io.reactivex.rxjava2:rxandroid:${libraries.rxAndroid}"
+
+    // Socket.IO
+    implementation("io.socket:socket.io-client:${libraries.socketIO}") {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+
+    // Facebook Login SDK
+    implementation "com.facebook.android:facebook-login:${libraries.facebookLoginSDK}"
+
+    // GooglePlus Login SDK
+    implementation("com.google.android.gms:play-services-auth:${libraries.googlePlusLoginSDK}") {
+        exclude(group: 'com.android.support')
+    }
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:${libraries.navigationVersion}"
+    implementation "androidx.navigation:navigation-ui-ktx:${libraries.navigationVersion}"
+
+    // OTP View
+    implementation "com.github.aabhasr1:OtpView:${libraries.otpView}"
+
+    // Flexbox Layout
+    implementation "com.google.android:flexbox:${libraries.flexBoxLayout}"
+
+    // AWS
+    implementation "com.amazonaws:aws-android-sdk-s3:${libraries.awsVersion}"
+
+    //iso parser
+    implementation 'com.googlecode.mp4parser:isoparser:1.0.2'
+
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:30.1.0')
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation "com.google.firebase:firebase-messaging:${libraries.firebaseMessaging}"
+    implementation "com.google.android.libraries.places:places:${libraries.googlePlaces}"
+
+
+
+    // CameraX core library
+    implementation 'androidx.camera:camera-core:1.0.0-beta03'
+
+    // CameraX Camera2 extensions
+    implementation 'androidx.camera:camera-camera2:1.0.0-beta03'
+
+    // CameraX Lifecycle library
+    implementation 'androidx.camera:camera-lifecycle:1.0.0-beta03'
+
+    // CameraX View class
+    implementation 'androidx.camera:camera-view:1.0.0-alpha10'
+
+    // CameraView for recording videos
+    implementation "dev.priyankvasa.android:cameraview-ex:${libraries.camera2View}"
+
+    //Image editor
+//    implementation 'com.github.iamutkarshtiwari:Ananas:1.2.6'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    //Shimmer recyclerView
+    implementation 'com.github.sharish:ShimmerRecyclerView:v1.3'
+
+    // Round image
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    //Spinkit loader
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+    implementation 'com.github.jaiselrahman:FilePicker:1.3.2'
+
+    //Pdf viewer
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
+
+    //Material Design Dialogs
+    implementation 'com.afollestad.material-dialogs:core:0.9.5.0'
+
+    // jsoup
+    implementation 'org.jsoup:jsoup:1.13.1'
+
+    //Photo editor
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.burhanrashid52:photoeditor:1.5.1'
+
+    // Room
+    implementation("androidx.room:room-runtime:${libraries.roomVersion}")
+    implementation("androidx.room:room-ktx:${libraries.roomVersion}")
+    annotationProcessor("androidx.room:room-compiler:${libraries.roomVersion}")
+    kapt("androidx.room:room-compiler:${libraries.roomVersion}")
+
+    //Video compressor
+    implementation 'id.zelory:compressor:3.0.1'
+
+    //Calender view
+    implementation 'com.github.tibolte:agendacalendarview:1.0.4'
+
+    //MultiImageSelection
+    implementation 'com.github.AnilFurkanOkcun:UWMediaPicker-Android:1.3.3'
+    implementation 'com.droidninja:filepicker:2.2.5'
+
+    //Chucker
+    debugImplementation "com.github.chuckerteam.chucker:library:3.5.2"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
+
+    implementation 'com.github.alamkanak:android-week-view:1.2.6'
+
+    // Exo player
+    implementation 'com.google.android.exoplayer:exoplayer:2.11.8'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.X.X'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.X.X'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.X.X'
+
+}

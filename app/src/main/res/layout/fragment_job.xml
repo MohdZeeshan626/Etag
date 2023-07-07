@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundBg"
+    android:clickable="true"
+    android:focusable="true">
+
+    <EditText
+        android:id="@+id/etSearchJob"
+        style="@style/StyleInputEditText"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="@string/st_search_job"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:elevation="@dimen/rippleStrokeWidth"
+        app:layout_constraintBottom_toTopOf="@+id/clView"
+        android:layout_marginBottom="@dimen/fragment_medium_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:drawablePadding="@dimen/fragment_medium_margin"
+        android:drawableStart="@drawable/ic_baseline_search_24"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/clView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/etSearchJob"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackgroundBg"
+        android:elevation="0dp"
+            android:visibility="visible"
+        android:theme="@style/DarkSearchViewTheme">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/colorTransparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="parallax">
+
+                <TextView
+                    android:id="@+id/tvJobs"
+                    style="@style/StyleSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:text="@string/st_jobs"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textColor="@color/colorHeaderTitle"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnNewJobs"
+                    app:layout_constraintEnd_toStartOf="@+id/btnNewJobs"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/btnNewJobs" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNewJobs"
+                    style="@style/StyleSubmitButton"
+                    android:layout_height="@dimen/user_image_size_chat"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:drawableStart="@drawable/ic_new_jobs"
+                    android:drawablePadding="@dimen/fragment_medium_margin"
+                    android:gravity="center"
+                    android:text="@string/st_new_job"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivJobContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/default_edittext_height"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/fragment_vertical_margin"
+                    android:layout_marginEnd="@dimen/fragment_small_margin"
+                    android:background="@drawable/drawable_color_accent_rounded_corners_solid"
+                    app:layout_constraintEnd_toStartOf="@+id/ivPhotosContainer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvJobs" />
+
+
+                <ImageView
+                    android:id="@+id/ivBag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fragment_default_margin"
+                    android:src="@drawable/ic_bag"
+                    app:layout_constraintBottom_toBottomOf="@id/ivJobContainer"
+                    app:layout_constraintStart_toStartOf="@+id/ivJobContainer"
+                    app:layout_constraintTop_toTopOf="@id/ivJobContainer" />
+
+                <TextView
+                    android:id="@+id/tvJobsLabel"
+                    style="@style/StyleSemiBold"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:text="@string/st_jobs"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/colorHeaderTitle"
+                    app:layout_constraintStart_toEndOf="@id/ivBag"
+                    app:layout_constraintTop_toTopOf="@id/ivBag" />
+
+                <TextView
+                    android:id="@+id/tvJobsValue"
+                    style="@style/StyleSemiBold"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="?attr/primaryTextColor"
+                    app:layout_constraintStart_toStartOf="@+id/tvJobsLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvJobsLabel" />
+
+                <ImageView
+                    android:id="@+id/ivPhotosContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/default_edittext_height"
+                    android:layout_marginStart="@dimen/fragment_small_margin"
+                    android:layout_marginTop="@dimen/fragment_vertical_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/drawable_color_accent_rounded_corners_solid"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivJobContainer"
+                    app:layout_constraintTop_toBottomOf="@+id/tvJobs" />
+
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fragment_default_margin"
+                    android:src="@drawable/ic_photo_camera"
+                    app:layout_constraintBottom_toBottomOf="@id/ivPhotosContainer"
+                    app:layout_constraintStart_toStartOf="@+id/ivPhotosContainer"
+                    app:layout_constraintTop_toTopOf="@id/ivPhotosContainer" />
+
+                <TextView
+                    android:id="@+id/tvPhotosLabel"
+                    style="@style/StyleSemiBold"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:text="@string/st_photos"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/colorHeaderTitle"
+                    app:layout_constraintStart_toEndOf="@id/ivCamera"
+                    app:layout_constraintTop_toTopOf="@id/ivCamera" />
+
+                <TextView
+                    android:id="@+id/tvPhotosValue"
+                    style="@style/StyleSemiBold"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="?attr/primaryTextColor"
+                    app:layout_constraintStart_toStartOf="@+id/tvPhotosLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPhotosLabel" />
+
+                <TextView
+                    android:id="@+id/tvDueDate"
+                    style="@style/StyleSemiBold"
+                    android:layout_marginTop="@dimen/fragment_vertical_margin"
+                    android:drawableEnd="@drawable/ic_down_arrow"
+                    android:drawablePadding="@dimen/line_spacing_extra"
+                    android:gravity="center"
+                    android:text="@string/st_due_date"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/colorHeaderTitle"
+                    app:layout_constraintStart_toStartOf="@+id/ivJobContainer"
+                    app:layout_constraintTop_toBottomOf="@+id/ivJobContainer" />
+
+                <ImageView
+                    android:id="@+id/ivFilterDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_filter_down"
+                    app:tint="@color/colorDisabledText"
+                    android:padding="@dimen/fragment_spacing"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvDueDate"
+                    app:layout_constraintEnd_toEndOf="@+id/ivPhotosContainer"
+                    app:layout_constraintTop_toTopOf="@+id/tvDueDate" />
+
+                <ImageView
+                    android:id="@+id/ivFilterUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/fragment_spacing"
+                    android:src="@drawable/ic_filter_up_word"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvDueDate"
+                    app:layout_constraintEnd_toStartOf="@+id/ivFilterDown"
+                    app:layout_constraintTop_toTopOf="@+id/tvDueDate" />
+
+                <ImageView
+                    android:id="@+id/ivGridType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fragment_medium_margin"
+                    android:src="@drawable/ic_dashboard_fill"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvDueDate"
+                    app:layout_constraintEnd_toStartOf="@+id/ivFilterUp"
+                    app:layout_constraintTop_toTopOf="@+id/tvDueDate" />
+
+                <ImageView
+                    android:id="@+id/ivListType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fragment_medium_margin"
+                    android:src="@drawable/ic_list_view"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvDueDate"
+                    app:layout_constraintEnd_toStartOf="@+id/ivGridType"
+                    app:layout_constraintTop_toTopOf="@+id/tvDueDate" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDueDate">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/fragment_small_margin"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        style="@style/StyleTextViewNoData"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:text="@string/st_no_jobs_found"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

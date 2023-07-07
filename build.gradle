@@ -1,0 +1,94 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        kotlinVersion = '1.6.10'
+        gradleVersion = '7.1.2'
+        googleServicesVersion = '4.3.10'
+        navVersion = '2.4.1'
+    }
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradleVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "com.google.gms:google-services:$googleServicesVersion"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navVersion"
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+ext {
+    configuration = [
+            packageName      : "com.max360group.cammax360",
+            compileSdkVersion: 31,
+            targetSdkVersion : 31,
+            minSdkVersion    : 26,
+            buildToolsVersion: "27.0.3",
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    dependencies = [
+            jUnit                 : "4.13.2",
+            testRunner            : "1.5.0-alpha01",
+            testEspresso          : "3.5.0-alpha04",
+            architectureComponents: '2.2.0',
+            appCompat             : '1.4.1',
+            constraintLayout      : '2.1.3',
+            coroutines            : '1.5.0',
+            googleAndroidMaterial : '1.6.0-alpha02',
+            recylerView           : '1.2.1',
+            cardView              : '1.0.0',
+            androidCoreKTX        : "1.7.0",
+            androidXFragmentKTX   : "1.4.1",
+            retrofit              : '2.9.0',
+            retrofitAdapter       : "2.3.0",
+            rxJava                : "2.2.9",
+            rxAndroid             : "2.1.0",
+            okHttpLoginInterceptor: '4.9.3',
+            osmDroid              : "6.0.3",
+            osmBonusPack          : "6.5.3",
+            signaturePad          : "1.2.1",
+            uCrop                 : "2.2.3",
+            fresco                : "2.6.0",
+            facebookLoginSDK      : '12.3.0',
+            googlePlusLoginSDK    : '20.1.0',
+            googleLocationServices: "16.0.0",
+            firebaseAnalytics     : '17.3.0',
+            firebaseMessaging     : '23.0.6',
+            googlePlaces          : "2.5.0",
+            workManager           : "1.0.1",
+            socketIO              : "2.0.0",
+            navigationVersion     : "2.2.0",
+            otpView               : "v1.1.2-ktx",
+            flexBoxLayout         : "1.1.1",
+            camera2View           : "3.5.5-alpha",
+            roomVersion           : "2.4.2",
+            awsVersion            : "2.16.8",
+            crashAnalytics        : "18.2.8",
+            analytics             : "20.1.0"
+    ]
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

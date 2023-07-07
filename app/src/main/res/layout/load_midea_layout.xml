@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbCheckSelection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_small_margin"
+        android:button="@drawable/drawable_stroke_check_box_selector"
+        android:padding="@dimen/fragment_spacing"
+        android:layout_marginStart="@dimen/fragment_medium_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivAll"
+            android:layout_width="@dimen/ic_verctor_image_size"
+            android:layout_height="@dimen/ic_verctor_image_size"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_stroke_check_box_selector" />
+
+
+        <TextView
+            android:id="@+id/tvDate"
+            style="@style/StyleBold"
+            android:layout_marginStart="@dimen/fragment_spacing"
+            android:layout_marginTop="@dimen/line_spacing_extra"
+            android:text="@string/st_all"
+            android:singleLine="true"
+            android:textColor="@color/colorHeaderTitle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintBottom_toBottomOf="@+id/cbAll"
+            app:layout_constraintTop_toTopOf="@+id/cbAll" />
+
+
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+    <ImageView
+        android:id="@+id/ivFilterDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_filter_down"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:padding="@dimen/line_spacing_extra"
+        app:layout_constraintBottom_toBottomOf="@+id/cbCheckSelection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cbCheckSelection" />
+
+    <ImageView
+        android:id="@+id/ivFilterUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fragment_small_margin"
+        android:src="@drawable/ic_filter_up_word"
+        android:padding="@dimen/line_spacing_extra"
+        app:layout_constraintBottom_toBottomOf="@+id/cbCheckSelection"
+        app:layout_constraintEnd_toStartOf="@+id/ivFilterDown"
+        app:layout_constraintTop_toTopOf="@+id/cbCheckSelection"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingHorizontal="@dimen/fragment_small_margin"
+        app:layout_constraintTop_toBottomOf="@+id/cbCheckSelection"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

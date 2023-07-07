@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack"
+        android:clickable="true"
+        android:focusable="true">
+
+    <com.max360group.cammax360.views.utils.frescozoomabledraweeview.zoomable.ZoomableDraweeView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/zdvImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:actualImageScaleType="fitCenter"
+            app:fadeDuration="300"
+            app:placeholderImage="@drawable/ic_image_placeholder" />
+
+    <TextView
+            android:id="@+id/tvCaption"
+            style="@style/StyleRegular"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/drawable_black_overlay_gradient"
+            android:gravity="center"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+</FrameLayout>

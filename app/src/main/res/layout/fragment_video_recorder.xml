@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <com.priyankvasa.android.cameraviewex.CameraView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/rvVideoList"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:adjustViewBounds="true"
+        android:keepScreenOn="true"
+        app:aspectRatio="4:3"
+        app:autoFocus="continuous_picture"
+        app:awb="auto"
+        app:cameraMode="single_capture"
+        app:continuousFrameSize="W1440,1080"
+        app:facing="back"
+        app:flash="auto"
+        app:jpegQuality="high"
+        app:noiseReduction="high_quality"
+        app:opticalStabilization="true"
+        app:outputFormat="jpeg"
+        app:pinchToZoom="true"
+        app:shutter="short_time"
+        app:singleCaptureSize="1920,H1080"
+        app:touchToFocus="true"
+        app:zsl="true" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvVideoList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/fragment_medium_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/ivCapture"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_upload"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivCapture"
+        app:layout_constraintTop_toTopOf="@id/ivCapture"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+
+    <ImageView
+        android:id="@+id/ivDone"
+        android:layout_width="@dimen/fragment_vertical_margin"
+        android:layout_height="@dimen/fragment_vertical_margin"
+        android:src="@drawable/ic_save_image"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivCapture"
+        app:layout_constraintTop_toTopOf="@id/ivCapture"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+    <ImageView
+        android:id="@+id/ivCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_cancel"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivCapture"
+        app:layout_constraintTop_toTopOf="@id/ivCapture"
+        app:layout_constraintEnd_toStartOf="@+id/ivDone"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+
+
+    <ImageView
+        android:id="@+id/ivGallary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_upload"
+        app:layout_constraintTop_toTopOf="@+id/ivCapture"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCapture"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+
+
+    <TextView
+        android:id="@+id/tvTimeCount"
+        style="@style/StyleMedium"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/ivCapture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivCapture"
+        tool:text="1:30" />
+
+
+    <ImageView
+        android:id="@+id/ivCapture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:src="@drawable/ic_image_capture"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

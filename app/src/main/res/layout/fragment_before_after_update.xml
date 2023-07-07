@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBeforeAfter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rvGallary"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/sdvImageBefore"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:background="@color/colorPrimaryText"
+            app:layout_constraintBottom_toTopOf="@+id/sdvImageAfter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBeforePhoto"
+            style="@style/StyleSemiBold"
+            android:layout_margin="@dimen/fragment_default_margin"
+            android:text="@string/st_before"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivEditBeforeAndCamera"
+            android:layout_width="@dimen/fragment_vertical_margin"
+            android:layout_height="@dimen/fragment_vertical_margin"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_edit"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/sdvImageBefore"
+            app:layout_constraintTop_toTopOf="@+id/sdvImageBefore" />
+
+        <ImageView
+            android:id="@+id/ivBeforeUploadAndCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_size"
+            android:src="@drawable/ic_cancel"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/ivEditBeforeAndCamera"
+            app:layout_constraintTop_toBottomOf="@+id/ivEditBeforeAndCamera" />
+
+        <ImageView
+            android:id="@+id/ivTagsBefore"
+            android:layout_width="@dimen/fragment_vertical_margin"
+            android:layout_height="@dimen/fragment_vertical_margin"
+            android:layout_marginTop="@dimen/small_text_size"
+            android:src="@drawable/ic_video_detail"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/ivBeforeUploadAndCancel"
+            app:layout_constraintTop_toBottomOf="@+id/ivBeforeUploadAndCancel" />
+
+        <ImageView
+            android:id="@+id/ivVisibilityBefore"
+            android:layout_width="@dimen/fragment_vertical_margin"
+            android:layout_height="@dimen/fragment_vertical_margin"
+            android:layout_marginTop="@dimen/small_text_size"
+            android:src="@drawable/ic_black_preview"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/ivTagsBefore"
+            app:layout_constraintTop_toBottomOf="@+id/ivTagsBefore" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/sdvImageAfter"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:scaleType="centerCrop"
+            android:background="@color/colorPrimaryText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sdvImageBefore" />
+
+        <TextView
+            android:id="@+id/tvAfterPhoto"
+            style="@style/StyleSemiBold"
+            android:layout_margin="@dimen/fragment_default_margin"
+            android:text="@string/st_after"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/sdvImageAfter"
+            app:layout_constraintTop_toTopOf="@id/sdvImageAfter" />
+
+
+        <ImageView
+            android:id="@+id/ivAfterCameraAndEdit"
+            android:layout_width="@dimen/fragment_vertical_margin"
+            android:layout_height="@dimen/fragment_vertical_margin"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/small_text_size"
+            android:src="@drawable/ic_camera_intent"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/sdvImageAfter"
+            app:layout_constraintTop_toTopOf="@+id/sdvImageAfter" />
+
+        <ImageView
+            android:id="@+id/ivAfterUploadCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_size"
+            android:src="@drawable/ic_upload"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/ivAfterCameraAndEdit"
+            app:layout_constraintTop_toBottomOf="@+id/ivAfterCameraAndEdit" />
+
+        <ImageView
+            android:id="@+id/ivTagAfter"
+            android:layout_width="@dimen/fragment_vertical_margin"
+            android:layout_height="@dimen/fragment_vertical_margin"
+            android:layout_marginTop="@dimen/small_text_size"
+            android:src="@drawable/ic_video_detail"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/ivAfterUploadCancel"
+            app:layout_constraintTop_toBottomOf="@+id/ivAfterUploadCancel" />
+
+        <ImageView
+            android:id="@+id/ivVisibilityAfter"
+            android:layout_width="@dimen/fragment_vertical_margin"
+            android:layout_height="@dimen/fragment_vertical_margin"
+            android:layout_marginTop="@dimen/small_text_size"
+            android:src="@drawable/ic_black_preview"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/ivTagAfter"
+            app:layout_constraintTop_toBottomOf="@+id/ivTagAfter" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSimpleView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rvGallary"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/sdvSimpleImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:scaleType="centerCrop"
+            android:background="@color/colorPrimaryText"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivEditSimple"
+            android:layout_width="@dimen/fragment_vertical_margin"
+            android:layout_height="@dimen/fragment_vertical_margin"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_edit"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/sdvSimpleImage"
+            app:layout_constraintTop_toTopOf="@+id/sdvSimpleImage" />
+
+        <ImageView
+            android:id="@+id/ivSimpleCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_size"
+            android:src="@drawable/ic_cancel"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/ivEditSimple"
+            app:layout_constraintTop_toBottomOf="@+id/ivEditSimple" />
+
+        <ImageView
+            android:id="@+id/ivTagsSimple"
+            android:layout_width="@dimen/fragment_vertical_margin"
+            android:layout_height="@dimen/fragment_vertical_margin"
+            android:layout_marginTop="@dimen/small_text_size"
+            android:src="@drawable/ic_video_detail"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/ivSimpleCancel"
+            app:layout_constraintTop_toBottomOf="@+id/ivSimpleCancel" />
+
+        <ImageView
+            android:id="@+id/ivVisibilitySimple"
+            android:layout_width="@dimen/fragment_vertical_margin"
+            android:layout_height="@dimen/fragment_vertical_margin"
+            android:layout_marginTop="@dimen/small_text_size"
+            android:src="@drawable/ic_black_preview"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/ivTagsSimple"
+            app:layout_constraintTop_toBottomOf="@+id/ivTagsSimple" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/ivDone"
+        android:layout_width="@dimen/user_image_size_chat"
+        android:layout_height="@dimen/user_image_size_chat"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        android:src="@drawable/ic_save_image"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivCamera"
+        android:layout_width="@dimen/user_image_size_chat"
+        android:layout_height="@dimen/user_image_size_chat"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        android:src="@drawable/ic_camera_intent"
+        app:layout_constraintBottom_toBottomOf="@id/ivDone"
+        app:layout_constraintEnd_toStartOf="@+id/ivDone"
+        app:layout_constraintTop_toTopOf="@+id/ivDone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGallary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/fragment_small_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/ivDone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

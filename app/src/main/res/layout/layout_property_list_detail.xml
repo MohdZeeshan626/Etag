@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:background="@drawable/drawable_color_white_rounded_corners_solid"
+    android:elevation="@dimen/home_card_elevation"
+    android:layout_marginVertical="@dimen/fragment_small_margin">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivSdvImage"
+        android:layout_width="@dimen/user_image_size_chat"
+        android:layout_height="@dimen/user_image_size_chat"
+        app:placeholderImage="@drawable/ic_round_property"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundedCornerRadius="@dimen/rounded_corner_radius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/StyleBold"
+        android:id="@+id/tvJobName"
+        android:layout_width="0dp"
+        android:text="Property Name"
+        android:textColor="@color/colorHeaderTitle"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        android:singleLine="true"
+        app:layout_constraintStart_toEndOf="@+id/ivSdvImage"
+        app:layout_constraintTop_toTopOf="@+id/ivSdvImage"
+        android:layout_marginTop="@dimen/line_spacing_extra"
+        android:layout_marginStart="@dimen/fragment_medium_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvLocation"
+        android:layout_width="0dp"
+        android:text="1 Matheson Street, Times, Causeway Bay, Hong Kong"
+        android:textColor="@color/colorDisabledText"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        app:layout_constraintStart_toStartOf="@+id/tvJobName"
+        app:layout_constraintTop_toBottomOf="@+id/tvJobName"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/line_spacing_extra"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height_medium"
+        android:background="@color/colorDivider"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocation"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvUnitObtainedLevel"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/ivOpenUnit"
+        app:layout_constraintBottom_toBottomOf="@+id/ivOpenUnit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:text="@string/st_units_obtained"
+        android:textColor="@color/colorDisabledText"/>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvUnitObtained"
+        app:layout_constraintStart_toEndOf="@+id/tvUnitObtainedLevel"
+        android:layout_marginStart="@dimen/line_spacing_extra"
+        app:layout_constraintTop_toTopOf="@+id/tvUnitObtainedLevel"
+        app:layout_constraintBottom_toBottomOf="@+id/tvUnitObtainedLevel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:text=" : 5"
+        android:textColor="@color/black"/>
+
+
+    <ImageView
+        android:id="@+id/ivOpenUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_collapse_action"
+       app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUnits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        android:nestedScrollingEnabled="false"
+        android:layout_marginTop="@dimen/line_spacing_extra"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/ivOpenUnit"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.drawee.view.SimpleDraweeView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sdvUserImage"
+        android:layout_width="@dimen/user_image_size_listing"
+        android:layout_height="@dimen/user_image_size_listing"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@color/colorPlaceHolderImage"
+        fresco:roundedCornerRadius="4dp" />

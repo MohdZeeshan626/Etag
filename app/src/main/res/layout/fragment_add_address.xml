@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/clRootView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/fragment_double_margin">
+
+            <TextView
+                android:id="@+id/tvJobs"
+                style="@style/StyleSemiBold"
+                android:layout_width="0dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/st_add_address"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/colorHeaderTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/btnNewJobs"
+                app:layout_constraintEnd_toStartOf="@+id/btnNewJobs"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnNewJobs" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNewJobs"
+                style="@style/StyleSubmitButton"
+                android:layout_height="@dimen/user_image_size_chat"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:text="@string/st_add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                style="@style/StyleSemiBold"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/st_location"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                app:layout_constraintTop_toBottomOf="@+id/btnNewJobs"/>
+
+            <EditText
+                android:id="@+id/etLocation"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/line_spacing_extra"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+            <ProgressBar
+                android:id="@+id/pbBar"
+                android:layout_width="@dimen/fragment_vertical_margin"
+                android:layout_height="@dimen/fragment_vertical_margin"
+                app:layout_constraintEnd_toEndOf="@+id/etLocation"
+                app:layout_constraintTop_toTopOf="@+id/etLocation"
+                android:visibility="gone"
+                android:backgroundTint="@color/demo_light_transparent"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                app:layout_constraintBottom_toBottomOf="@+id/etLocation"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLocationList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/etLocation"
+                app:layout_constraintEnd_toEndOf="@+id/etLocation"
+                app:layout_constraintTop_toBottomOf="@+id/etLocation"
+                android:visibility="gone"
+                android:scrollbars="vertical"
+                android:layout_marginTop="@dimen/fragment_small_margin"
+                android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                android:elevation="@dimen/home_card_elevation"
+                android:paddingBottom="@dimen/fragment_medium_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/drawable_input_edittext_normal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"/>
+
+            <TextView
+                android:id="@+id/tvAddressName"
+                style="@style/StyleSemiBold"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:text="@string/st_address_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                app:layout_constraintTop_toBottomOf="@+id/etLocation"/>
+
+            <EditText
+                android:id="@+id/etAddressName"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/line_spacing_extra"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etLocation"
+                app:layout_constraintStart_toStartOf="@+id/etLocation"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressName" />
+
+            <TextView
+                android:id="@+id/tvBuilding"
+                style="@style/StyleSemiBold"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:text="@string/st_building_house"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                app:layout_constraintTop_toBottomOf="@+id/etAddressName"/>
+
+            <EditText
+                android:id="@+id/etBuilding"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/line_spacing_extra"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etAddressName"
+                app:layout_constraintStart_toStartOf="@+id/etAddressName"
+                app:layout_constraintTop_toBottomOf="@+id/tvBuilding" />
+
+            <TextView
+                android:id="@+id/tvStreetAddress"
+                style="@style/StyleSemiBold"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:text="@string/st_street_address"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                app:layout_constraintTop_toBottomOf="@+id/etBuilding"/>
+
+            <EditText
+                android:id="@+id/etStreetAddress"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/line_spacing_extra"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etBuilding"
+                app:layout_constraintStart_toStartOf="@+id/etBuilding"
+                app:layout_constraintTop_toBottomOf="@+id/tvStreetAddress" />
+
+            <TextView
+                android:id="@+id/tvPostalZipCode"
+                style="@style/StyleSemiBold"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:text="@string/st_postal_zip_code"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                app:layout_constraintTop_toBottomOf="@+id/etStreetAddress"/>
+
+            <EditText
+                android:id="@+id/etPostalZipCode"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/line_spacing_extra"
+                android:singleLine="true"
+                android:inputType="number"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etBuilding"
+                app:layout_constraintStart_toStartOf="@+id/etBuilding"
+                app:layout_constraintTop_toBottomOf="@+id/tvPostalZipCode" />
+
+            <TextView
+                android:id="@+id/tvCity"
+                style="@style/StyleSemiBold"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:text="@string/st_city"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                app:layout_constraintTop_toBottomOf="@+id/etPostalZipCode"/>
+
+            <EditText
+                android:id="@+id/etCity"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/line_spacing_extra"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etBuilding"
+                app:layout_constraintStart_toStartOf="@+id/etBuilding"
+                app:layout_constraintTop_toBottomOf="@+id/tvCity" />
+
+            <TextView
+                android:id="@+id/tvState"
+                style="@style/StyleSemiBold"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:text="@string/st_job_state"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                app:layout_constraintTop_toBottomOf="@+id/etCity"/>
+
+            <EditText
+                android:id="@+id/etState"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/line_spacing_extra"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etBuilding"
+                app:layout_constraintStart_toStartOf="@+id/etBuilding"
+                app:layout_constraintTop_toBottomOf="@+id/tvState" />
+
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/fgGoogleMap"
+                android:layout_width="0dp"
+                android:layout_height="321dp"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                app:layout_constraintStart_toStartOf="@+id/etState"
+                app:layout_constraintEnd_toEndOf="@+id/etState"
+                app:layout_constraintTop_toBottomOf="@+id/etState"
+                app:layout_constraintBottom_toBottomOf="parent">
+            </com.google.android.gms.maps.MapView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

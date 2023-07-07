@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/fragment_vertical_margin">
+
+            <ImageView
+                android:id="@+id/ivHeaderView"
+                android:layout_width="0dp"
+                android:layout_height="114dp"
+                android:background="?attr/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdvUserImage"
+                android:layout_width="@dimen/profile_image_size"
+                android:layout_height="@dimen/profile_image_size"
+                app:placeholderImage="@drawable/ic_user_placeholder"
+                app:placeholderImageScaleType="centerCrop"
+                app:roundingBorderColor="?attr/primaryTextColor"
+                app:roundingBorderWidth="@dimen/divider_height"
+                app:layout_constraintBottom_toBottomOf="@+id/ivHeaderView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:roundAsCircle="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivHeaderView" />
+
+            <ImageView
+                android:id="@+id/ivCameraPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/fragment_vertical_margin"
+                android:src="@drawable/ic_camera_picker"
+                app:layout_constraintBottom_toBottomOf="@+id/sdvUserImage"
+                app:layout_constraintEnd_toEndOf="@+id/sdvUserImage"
+                app:layout_constraintStart_toEndOf="@+id/sdvUserImage" />
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/StyleSemiBold"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                tools:text="John Denial"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sdvUserImage" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                style="@style/StyleRegular"
+                android:layout_marginTop="@dimen/fragment_spacing"
+                tools:text="jogndenial@gmail.com"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+
+            <EditText
+                android:id="@+id/etOrganisationName"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/hint_first_name"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+
+            <EditText
+                android:id="@+id/etEmail"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/label_email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etOrganisationName"
+                app:layout_constraintStart_toStartOf="@+id/etOrganisationName"
+                app:layout_constraintTop_toBottomOf="@+id/etOrganisationName" />
+
+            <TextView
+                style="@style/StyleInputEditTextLight"
+                android:id="@+id/tvCountryCode"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail"
+                android:text="@string/default_country_code"
+                android:gravity="center_vertical"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:drawableTint="@color/colorPrimaryText"
+                android:drawablePadding="@dimen/drawable_padding"
+                app:layout_constraintStart_toStartOf="@+id/etEmail"
+                android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                style="@style/StyleInputEditTextLight"
+                android:hint="@string/st_phone_number"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                app:layout_constraintStart_toEndOf="@+id/tvCountryCode"
+                app:layout_constraintEnd_toEndOf="@+id/etOrganisationName"
+                app:layout_constraintTop_toTopOf="@+id/tvCountryCode"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCountryCode"/>
+
+            <TextView
+                android:id="@+id/etAddress"
+                style="@style/StyleSemiBold"
+                android:layout_width="0dp"
+                android:text="@string/st_address"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/ivEdit"
+                app:layout_constraintStart_toStartOf="@+id/tvCountryCode"
+                app:layout_constraintTop_toTopOf="@+id/ivEdit"
+                app:layout_constraintBottom_toBottomOf="@+id/ivEdit"/>
+
+            <ImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edit_new"
+                app:layout_constraintEnd_toEndOf="@+id/etPhoneNumber"
+                android:layout_marginEnd="@dimen/fragment_small_margin"
+                app:layout_constraintTop_toBottomOf="@+id/etPhoneNumber"
+                android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+            <TextView
+                style="@style/StyleRegular"
+                android:id="@+id/tvAddress"
+                android:layout_width="0dp"
+                android:text=""
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etPhoneNumber"
+                android:layout_marginTop="@dimen/fragment_medium_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toStartOf="@+id/etAddress"
+                app:layout_constraintTop_toBottomOf="@+id/ivEdit"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivMap"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/address_map_height"
+                app:roundedCornerRadius="@dimen/rounded_corner_radius"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+                app:layout_constraintStart_toStartOf="@+id/tvAddress"
+                app:layout_constraintEnd_toEndOf="@+id/etPhoneNumber"/>
+
+            <TextView
+                android:id="@+id/tvColorTheme"
+                style="@style/StyleSemiBold"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:text="@string/st_select_colour_theme_for_your_account"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/ivMap"
+                app:layout_constraintTop_toBottomOf="@+id/ivMap" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:id="@+id/rvColors"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_small_margin"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="6"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                app:layout_constraintTop_toBottomOf="@id/tvColorTheme"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSaveChanges"
+                style="@style/StyleSubmitButton"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/fragment_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:visibility="visible"
+                android:text="@string/st_save_changes"
+                app:layout_constraintEnd_toEndOf="@+id/etPhoneNumber"
+                app:layout_constraintStart_toStartOf="@id/etAddress"
+                app:layout_constraintTop_toBottomOf="@+id/rvColors" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

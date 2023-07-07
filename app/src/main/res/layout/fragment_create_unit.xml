@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="0dp"
+            android:theme="@style/DarkSearchViewTheme"
+            android:visibility="visible">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@color/colorTransparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdvUserImage"
+                        android:layout_width="@dimen/profile_image_size"
+                        android:layout_height="@dimen/profile_image_size"
+                        app:roundAsCircle="true"
+                        app:placeholderImage="@drawable/ic_unit_place_holder"
+                        app:placeholderImageScaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnSave"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+                    <ImageView
+                        android:id="@+id/ivCameraPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/fragment_vertical_margin"
+                        android:src="@drawable/ic_camera_picker"
+                        app:layout_constraintBottom_toBottomOf="@+id/sdvUserImage"
+                        app:layout_constraintEnd_toEndOf="@+id/sdvUserImage"
+                        app:layout_constraintStart_toEndOf="@+id/sdvUserImage" />
+
+                    <TextView
+                        android:id="@+id/tvCreateUnit"
+                        style="@style/StyleSemiBold"
+                        android:layout_width="0dp"
+                        android:layout_margin="@dimen/activity_horizontal_margin"
+                        android:text="@string/st_create_unit"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:textColor="@color/colorHeaderTitle"
+                        app:layout_constraintBottom_toBottomOf="@+id/btnSave"
+                        app:layout_constraintEnd_toStartOf="@+id/btnSave"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/btnSave" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSave"
+                        style="@style/StyleSubmitButton"
+                        android:layout_height="@dimen/user_image_size_chat"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="center"
+                        android:text="@string/st_save"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        style="@style/StyleSemiBold"
+                        android:layout_marginTop="@dimen/header_top_margin"
+                        android:text="@string/st_unit_name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        app:layout_constraintStart_toStartOf="@+id/tvCreateUnit"
+                        app:layout_constraintTop_toBottomOf="@+id/sdvUserImage"/>
+
+                    <EditText
+                        android:id="@+id/etFirstName"
+                        style="@style/StyleInputEditTextLight"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="@dimen/line_spacing_extra"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/tvCreateUnit"
+                        app:layout_constraintEnd_toEndOf="@+id/btnSave"
+                        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+
+                    <TextView
+                        android:id="@+id/tvType"
+                        style="@style/StyleSemiBold"
+                        android:text="@string/st_unit_type_level"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        app:layout_constraintStart_toStartOf="@+id/etFirstName"
+                        app:layout_constraintTop_toBottomOf="@+id/etFirstName"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clPropertyView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_input_edittext_normal1"
+                        android:layout_marginTop="@dimen/line_spacing_extra"
+                        android:padding="0dp"
+                        app:layout_constraintEnd_toEndOf="@+id/etFirstName"
+                        app:layout_constraintStart_toStartOf="@+id/etFirstName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvType">
+
+                        <TextView
+                            android:id="@+id/spnrType"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/default_edittext_height"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="@dimen/fragment_medium_margin"
+                            android:singleLine="true"
+                            android:elevation="0dp"
+                            android:text="@string/select"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_down_arrow"
+                            app:layout_constraintEnd_toEndOf="@+id/spnrType"
+                            app:layout_constraintTop_toTopOf="@+id/spnrType"
+                            app:layout_constraintBottom_toBottomOf="@+id/spnrType"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupUnit"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="0dp"
+                            android:layout_marginHorizontal="@dimen/fragment_medium_margin"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/spnrType"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tvBathroom"
+                        style="@style/StyleSemiBold"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/st_bathroom"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        app:layout_constraintStart_toStartOf="@+id/etFirstName"
+                        app:layout_constraintTop_toBottomOf="@+id/clPropertyView" />
+
+                    <EditText
+                        android:id="@+id/etBathroom"
+                        style="@style/StyleInputEditTextLight"
+                        android:layout_marginTop="@dimen/line_spacing_extra"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:inputType="number"
+                        android:layout_marginEnd="@dimen/fragment_small_margin"
+                        app:layout_constraintEnd_toStartOf="@+id/etBedroom"
+                        app:layout_constraintStart_toStartOf="@+id/etFirstName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvBathroom" />
+
+                    <TextView
+                        android:id="@+id/tvBedroom"
+                        style="@style/StyleSemiBold"
+                        android:text="@string/st_bedroom"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        app:layout_constraintStart_toStartOf="@+id/etBedroom"
+                        app:layout_constraintTop_toTopOf="@+id/tvBathroom" />
+
+                    <EditText
+                        android:id="@+id/etBedroom"
+                        style="@style/StyleInputEditTextLight"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:inputType="number"
+                        android:layout_marginStart="@dimen/fragment_small_margin"
+                        app:layout_constraintEnd_toEndOf="@+id/etFirstName"
+                        app:layout_constraintStart_toEndOf="@+id/etBathroom"
+                        app:layout_constraintTop_toTopOf="@+id/etBathroom"
+                        app:layout_constraintBottom_toBottomOf="@+id/etBathroom"/>
+
+                    <TextView
+                        android:id="@+id/tvTotalSqft"
+                        style="@style/StyleSemiBold"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/st_total_sq_fit"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        app:layout_constraintStart_toStartOf="@+id/etFirstName"
+                        app:layout_constraintTop_toBottomOf="@+id/etBathroom" />
+
+                    <EditText
+                        android:id="@+id/etSqft"
+                        style="@style/StyleInputEditTextLight"
+                        android:layout_marginTop="@dimen/line_spacing_extra"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:inputType="number"
+                        app:layout_constraintEnd_toEndOf="@+id/etFirstName"
+                        app:layout_constraintStart_toStartOf="@+id/tvTotalSqft"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTotalSqft" />
+
+                    <TextView
+                        android:id="@+id/tvComment"
+                        style="@style/StyleSemiBold"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/st_comments"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        app:layout_constraintStart_toStartOf="@+id/etFirstName"
+                        app:layout_constraintTop_toBottomOf="@+id/etSqft" />
+
+                    <EditText
+                        android:id="@+id/etComment"
+                        style="@style/StyleInputEditTextLight"
+                        android:layout_marginTop="@dimen/line_spacing_extra"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/etSqft"
+                        app:layout_constraintStart_toStartOf="@+id/tvComment"
+                        app:layout_constraintTop_toBottomOf="@+id/tvComment" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMenuAdapter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.max360group.cammax360.views.utils.NonSwipeableViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/fragment_medium_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvMenuAdapter" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <include layout="@layout/view_integration" />
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

@@ -1,0 +1,13 @@
+{
+    "UserAgent": "aws-amplify-cli/2.0",
+    "Version": "1.0",
+    "storage": {
+        "plugins": {
+            "awsS3StoragePlugin": {
+                "bucket": "kaimzz-updated160733-master",
+                "region": "us-west-2",
+                "defaultAccessLevel": "guest"
+            }
+        }
+    }
+}

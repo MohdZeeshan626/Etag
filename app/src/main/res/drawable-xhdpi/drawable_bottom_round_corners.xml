@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp">
+        <shape>
+            <solid android:color="#F8F8F8"/>
+            <stroke
+                android:width="@dimen/stroke_width"
+                android:color="#F8F8F8"/>
+
+            <corners android:bottomLeftRadius="@dimen/fragment_small_margin"
+                android:bottomRightRadius="@dimen/fragment_small_margin"/>
+            <padding
+                android:left="@dimen/fragment_default_margin"
+                android:right="@dimen/fragment_default_margin"/>
+        </shape>
+    </item>
+
+</layer-list>

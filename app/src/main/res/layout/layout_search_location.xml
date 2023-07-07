@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/fragment_default_margin"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdvUserImage"
+        android:layout_width="@dimen/fragment_default_margin"
+        android:layout_height="@dimen/fragment_default_margin"
+        android:scaleType="centerCrop"
+        app:placeholderImage="@drawable/ic_pin_location"
+        android:tint="?attr/primaryTextColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/tvLocation"
+        style="@style/StyleMedium"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/fragment_medium_margin"
+        android:text="Chandigrah"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        android:layout_marginEnd="@dimen/fragment_small_margin"
+        app:layout_constraintStart_toEndOf="@id/sdvUserImage"
+        app:layout_constraintEnd_toStartOf="@+id/btnCreateProperty"
+        app:layout_constraintTop_toTopOf="@+id/sdvUserImage"/>
+
+    <TextView
+        android:id="@+id/tvAddress"
+        style="@style/StyleRegular"
+        android:layout_width="0dp"
+        android:text="sect 29"
+        app:layout_constraintEnd_toEndOf="@+id/tvLocation"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintStart_toStartOf="@+id/tvLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocation"/>
+
+    <TextView
+        android:id="@+id/btnCreateProperty"
+         style="@style/StyleMedium"
+        android:background="@drawable/drawable_small_rounded_corners_solid"
+        android:backgroundTint="?attr/primaryTextColor"
+        android:textColor="@color/white"
+        android:paddingVertical="@dimen/fragment_small_margin"
+        android:paddingHorizontal="@dimen/fragment_small_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:drawableStart="@drawable/ic_new_jobs"
+        android:gravity="center"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:text="@string/st_add_new"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorDivider"
+        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

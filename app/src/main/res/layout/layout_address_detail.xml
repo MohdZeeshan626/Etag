@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+    android:layout_marginVertical="@dimen/fragment_small_margin"
+    android:background="@drawable/drawable_color_white_rounded_corners_solid"
+    android:elevation="@dimen/fragment_small_margin"
+    android:padding="@dimen/activity_horizontal_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        style="@style/StyleBold"
+        android:id="@+id/tvFullAddressType"
+        android:text="@string/st_primary_address"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvFullAddress"
+        android:layout_width="0dp"
+        android:text="178A, Elante Mall, Ground And First Floor, Purv Marg"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="@+id/tvFullAddressType"
+        app:layout_constraintTop_toBottomOf="@+id/tvFullAddressType"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivMap"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/address_map_height"
+        app:roundedCornerRadius="@dimen/rounded_corner_radius"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintTop_toBottomOf="@+id/tvFullAddress"
+        app:layout_constraintStart_toStartOf="@+id/tvFullAddress"
+        app:layout_constraintEnd_toEndOf="@+id/tvFullAddress"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

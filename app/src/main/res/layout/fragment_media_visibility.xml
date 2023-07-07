@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/StyleSemiBold"
+                android:layout_width="0dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/st_media_visibility"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/colorHeaderTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/btnSave"
+                app:layout_constraintEnd_toStartOf="@+id/btnSave"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnSave" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSave"
+                style="@style/StyleSubmitButton"
+                android:layout_height="@dimen/default_button_height_medium"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:text="@string/st_save_changes"
+                android:src="@drawable/ic_search_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/rvMedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shimmer_demo_child_count="3"
+                app:shimmer_demo_grid_child_count="3"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_duration="800"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:paddingHorizontal="@dimen/fragment_medium_margin"
+                app:shimmer_demo_shimmer_color="?attr/primaryTextColor"
+                app:shimmer_demo_layout="@layout/grid_shimmer_view"
+                app:shimmer_demo_layout_manager_type="grid"
+                app:layout_constraintTop_toBottomOf="@+id/btnSave"/>
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/rvJobsList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:visibility="visible"
+                app:shimmer_demo_child_count="5"
+                app:shimmer_demo_grid_child_count="1"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_duration="800"
+                app:shimmer_demo_shimmer_color="?attr/primaryTextColor"
+                app:shimmer_demo_layout="@layout/listing_shimmer_view"
+                app:layout_constraintTop_toBottomOf="@+id/rvMedia"/>
+
+
+            <TextView
+                android:id="@+id/tvNoData"
+                style="@style/StyleTextViewNoData"
+                android:visibility="gone"
+                android:text="st_no_members"
+                app:layout_constraintBottom_toBottomOf="@+id/rvJobsList"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rvJobsList" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

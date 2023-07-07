@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_small_margin">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@drawable/drawable_stroke_white"
+            android:backgroundTint="@color/bg_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/btnMonth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btnDay"
+            app:layout_constraintTop_toTopOf="@+id/btnMonth" />
+
+        <TextView
+            android:id="@+id/btnWeekly"
+            style="@style/StyleSemiBold"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:text="Weekly"
+            android:paddingVertical="@dimen/fragment_medium_margin"
+            android:paddingHorizontal="@dimen/fragment_medium_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/colorDisabledText"
+            app:layout_constraintEnd_toStartOf="@+id/btnMonth"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/btnMonth"
+            style="@style/StyleSemiBold"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:text="@string/st_month"
+            android:paddingVertical="@dimen/fragment_medium_margin"
+            android:paddingHorizontal="@dimen/fragment_medium_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="?attr/primaryTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnWeekly" />
+
+        <TextView
+            android:id="@+id/btnDay"
+            style="@style/StyleSemiBold"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:text="@string/st_day"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/colorDisabledText"
+            android:paddingVertical="@dimen/fragment_medium_margin"
+            android:paddingHorizontal="@dimen/fragment_medium_margin"
+            app:layout_constraintEnd_toStartOf="@+id/btnWeekly"
+            app:layout_constraintTop_toTopOf="@+id/btnWeekly" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOnBack"
+            style="@style/StyleSubmitButton"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="@string/st_back"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="?attr/primaryTextColor"
+            app:layout_constraintBottom_toBottomOf="@+id/monthYearTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/monthYearTV" />
+
+        <TextView
+            android:id="@+id/monthYearTV"
+            style="@style/StyleSemiBold"
+            android:layout_marginTop="@dimen/fragment_vertical_margin"
+            android:text="Feb 2021"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnWeekly" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOnNext"
+            style="@style/StyleSubmitButton"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="@string/st_next"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="?attr/primaryTextColor"
+            app:layout_constraintBottom_toBottomOf="@+id/monthYearTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/monthYearTV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?attr/primaryTransparent"
+        android:paddingVertical="@dimen/fragment_small_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SUN"
+            android:fontFamily="@font/font_santral_medium"
+            android:textAlignment="center"
+            android:textColor="?attr/primaryTextColor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MON"
+            android:fontFamily="@font/font_santral_medium"
+            android:textAlignment="center"
+            android:textColor="?attr/primaryTextColor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TUE"
+            android:fontFamily="@font/font_santral_medium"
+            android:textAlignment="center"
+            android:textColor="?attr/primaryTextColor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="WED"
+            android:fontFamily="@font/font_santral_medium"
+            android:textAlignment="center"
+            android:textColor="?attr/primaryTextColor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="THUR"
+            android:fontFamily="@font/font_santral_medium"
+            android:textAlignment="center"
+            android:textColor="?attr/primaryTextColor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="FRI"
+            android:fontFamily="@font/font_santral_medium"
+            android:textAlignment="center"
+            android:textColor="?attr/primaryTextColor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SAT"
+            android:fontFamily="@font/font_santral_medium"
+            android:textAlignment="center"
+            android:textColor="?attr/primaryTextColor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendarRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+

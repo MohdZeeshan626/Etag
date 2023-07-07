@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/line_spacing_extra"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvEvent"
+        style="@style/StyleMedium"
+        android:layout_width="0dp"
+        android:background="@drawable/drawable_small_rounded_corners_solid"
+        android:backgroundTint="?attr/primaryTextColor"
+        android:textColor="@color/white"
+        android:text="events"
+        android:singleLine="true"
+        android:layout_marginTop="@dimen/line_spacing_extra"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:paddingVertical="@dimen/fragment_spacing"
+        android:paddingHorizontal="@dimen/line_spacing_extra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background_img">
+
+    <ImageView
+        android:id="@+id/ivHeaderView"
+        android:layout_width="@dimen/auth_logo_width"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_marginTop="@dimen/header_top_margin"
+        android:src="@drawable/ic_cam_max_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginTop="@dimen/header_top_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/ivHeaderView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvSignInLabel"
+                style="@style/StyleBold"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
+                android:text="@string/st_sign_up_to_create_account"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCredentialLabel"
+                style="@style/StyleMedium"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
+                android:text="@string/st_enter_your_sign_up_credentials"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvSignInLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignInLabel" />
+
+            <EditText
+                android:id="@+id/etFirstName"
+                style="@style/StyleInputEditText"
+                android:layout_marginTop="@dimen/header_top_margin"
+                android:layout_marginEnd="@dimen/line_spacing_extra"
+                android:hint="@string/hint_first_name"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/etLastName"
+                app:layout_constraintStart_toStartOf="@+id/tvCredentialLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvCredentialLabel" />
+
+            <EditText
+                android:id="@+id/etLastName"
+                style="@style/StyleInputEditText"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/line_spacing_extra"
+                android:layout_marginTop="@dimen/header_top_margin"
+                android:hint="@string/hint_last_name"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/tvCredentialLabel"
+                app:layout_constraintStart_toEndOf="@+id/etFirstName"
+                app:layout_constraintTop_toBottomOf="@+id/tvCredentialLabel" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                style="@style/StyleInputEditText"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:hint="@string/label_email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/tvCredentialLabel"
+                app:layout_constraintStart_toStartOf="@+id/tvCredentialLabel"
+                app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                style="@style/StyleInputEditText"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:hint="@string/label_password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/tvCredentialLabel"
+                app:layout_constraintStart_toStartOf="@+id/tvCredentialLabel"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                style="@style/StyleInputEditText"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:hint="@string/st_confirm_password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etPassword"
+                app:layout_constraintStart_toStartOf="@+id/etPassword"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignUp"
+        style="@style/StyleSubmitButton"
+        android:layout_marginBottom="@dimen/fragment_default_margin"
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toTopOf="@+id/tvAlreadyHaveAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"/>
+
+
+    <TextView
+        android:id="@+id/tvAlreadyHaveAccount"
+        style="@style/StyleSemiBold"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="@string/already_have_an_account"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

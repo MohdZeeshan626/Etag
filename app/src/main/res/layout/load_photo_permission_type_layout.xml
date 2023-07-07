@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/user_image_rounded_border_width"
+    android:layout_marginHorizontal="@dimen/fragment_spacing"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbTermsPrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintTop_toTopOf="parent"
+        android:button="@drawable/drawable_check_box_selector"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/ic_verctor_image_size"
+            android:layout_height="@dimen/ic_verctor_image_size"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+    <TextView
+        style="@style/StyleSemiBold"
+        android:id="@+id/tvName"
+        android:text="@string/st_users"
+        android:textColor="@color/colorHeaderTitle"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@+id/cbTermsPrivacy"
+        app:layout_constraintTop_toTopOf="@+id/cbTermsPrivacy"
+        app:layout_constraintBottom_toBottomOf="@+id/cbTermsPrivacy"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/fragment_default_margin"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdvUserImage"
+        android:layout_width="@dimen/damage_image_width_offset"
+        android:layout_height="@dimen/damage_image_width_offset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/ic_user_placeholder"
+        app:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/StyleSemiBold"
+        android:layout_marginStart="@dimen/fragment_medium_margin"
+        android:text="Christan Gray"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorHeaderTitle"
+        app:layout_constraintStart_toEndOf="@+id/sdvUserImage"
+        app:layout_constraintTop_toTopOf="@id/sdvUserImage" />
+
+    <TextView
+        android:id="@+id/tvNote"
+        style="@style/StyleRegular"
+        android:layout_width="0dp"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typeset."
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:layout_marginTop="@dimen/fragment_spacing"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/StyleRegular"
+        android:layout_width="0dp"
+        android:text="June 18, 2021  6:00 PM"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:layout_marginTop="@dimen/fragment_small_margin"
+        android:textColor="@color/colorDisabledText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/rvImages" />
+
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvImages"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:placeholderImage="@color/colorPlaceHolderImage"
+        app:roundedCornerRadius="@dimen/rounded_corner_radius"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/fragment_small_margin"
+        app:layout_constraintStart_toStartOf="@+id/tvNote"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

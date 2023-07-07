@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4FD44C</color>
+    <color name="colorPrimaryDark">#4FD44C</color>
+    <color name="colorAccent">#4FD44C</color>
+
+
+    <color name="colorPrimaryTheme1">#5F4CD4</color>
+    <color name="colorPrimaryTheme1Transparent">#1A5F4CD4</color>
+    <color name="colorPrimaryTheme2">#C295CC</color>
+    <color name="colorPrimaryTheme2Transparent">#1AC295CC</color>
+    <color name="colorPrimaryTheme3">#FF5959</color>
+    <color name="colorPrimaryTheme3Transparent">#1AFF5959</color>
+    <color name="colorPrimaryTheme4">#FFD5A7</color>
+    <color name="colorPrimaryTheme4Transparent">#1AFFD5A7</color>
+    <color name="colorPrimaryTheme5">#4D3670</color>
+    <color name="colorPrimaryTheme5Transparent">#1A4D3670</color>
+
+    <color name="colorPlaceHolderImage">#EDF4F6</color>
+    <color name="colorPlaceHolderImageDark">#D5DBDD</color>
+
+    <color name="colorGreen">#3EBD17</color>
+    <color name="colorRed">#FF1931</color>
+    <color name="colorSubBtnGradStart">#FF0264</color>
+    <color name="colorSubBtnGradEnd">#FF6E89</color>
+
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorPrimaryText">#414141</color>
+    <color name="colorSecondaryText">#848484</color>
+    <color name="colorDisabledText">#999999</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackTransparent">#80000000</color>
+    <color name="colorWhiteTransparent">#33FFFFFF</color>
+    <color name="colorPrimaryTransparent">#1A4FD44C</color>
+    <color name="colorBlueTransparent">#330F81C0</color>
+    <color name="colorHeaderTitle">#222222</color>
+    <color name="color_disable_image">#1A4FD44C</color>
+    <color name="colorBlueTextLine">#0F81C0</color>
+    <color name="colorSkyBlue">#4CD4D4</color>
+    <color name="colorPurple">#5F4CD4</color>
+    <color name="colorBackgroundBg">#FAFAFB</color>
+    <color name="colorSearchBar">#F8F8F8</color>
+    <color name="colorBackground">#E5E5E5</color>
+    <color name="colorTags">#F1F1F1</color>
+
+    <color name="rippelColor">@color/colorAccent</color>
+
+    <color name="colorDivider">#EFEFEF</color>
+    <color name="colorDividerDark">#EDEDED</color>
+    <color name="colorGrayBg">#F4F6F7</color>
+
+    <color name="colorRecylerViewDivider">#EBEBEB</color>
+
+    <color name="colorInputEditTextHint">#7E7E7E</color>
+    <color name="colorInputEditTextValue">@color/colorPrimaryText</color>
+    <color name="colorInputEditTextStroke">@color/colorInputEditTextHint</color>
+
+    <color name="colorFacebookButton">#4267B2</color>
+    <color name="colorGoogleButton">#DD4B39</color>
+    <color name="colorRadioButtonNormal">#F7F7F7</color>
+    <color name="colorRadioButtonChecked">#26FF0966</color>
+    <color name="colorSearchViewBg">#08000000</color>
+    <color name="colorChatBarBg">#EDF4F6</color>
+    <color name="colorChatMsgsTime">#7C7C7C</color>
+    <color name="colorRecMsgBubbleStroke">#6FFF0C68</color>
+    <color name="colorCheckBoxNormal">#C5C5C5</color>
+    <color name="colorSettingsHeaderBg">#6FFF0C68</color>
+    <color name="colorProfileLocation">#8CFFFFFF</color>
+    <color name="colorAddPhotoBg">#F7F7F7</color>
+    <color name="colorAddPhotoPlaceholder">#FFD5E0</color>
+    <color name="colorMemoriesText">#BDBDBD</color>
+    <color name="colorRadioButtonFilterChecked">#40FFFFFF</color>
+    <color name="colorElevationShadow">#0F1C8BC1</color>
+
+    //Image editor
+    <color name="blue_color_picker">#0066FF</color>
+    <color name="brown_color_picker">#AF593E</color>
+    <color name="green_color_picker">#01A368</color>
+    <color name="orange_color_picker">#FF861F</color>
+    <color name="red_color_picker">#ED0A3F</color>
+    <color name="red_orange_color_picker">#FF3F34</color>
+    <color name="sky_blue_color_picker">#76D7EA</color>
+    <color name="violet_color_picker">#8359A3</color>
+    <color name="yellow_color_picker">#FBE870</color>
+    <color name="yellow_green_color_picker">#C5E17A</color>
+    <color name="tool_bg">#151414</color>
+    <color name="semi_black_transparent">#99000000</color>
+
+    <integer-array name="EventsRandomColors">
+        <item>@color/blue_color_picker</item>
+        <item>@color/colorPrimaryTheme3</item>
+        <item>@color/green_color_picker</item>
+        <item>@color/orange_color_picker</item>
+        <item>@color/red</item>
+        <item>@color/red_color_picker</item>
+        <item>@color/red_orange_color_picker</item>
+        <item>@color/sky_blue_color_picker</item>
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimaryTheme5</item>
+    </integer-array>
+</resources>

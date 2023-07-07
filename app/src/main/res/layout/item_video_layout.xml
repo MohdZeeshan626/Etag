@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fragment_small_margin"
+        android:layout_marginVertical="@dimen/fragment_small_margin"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdvVideoImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_image_size"
+            android:visibility="visible"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholderImage="@color/grey"
+            app:viewAspectRatio="1"
+            app:roundedCornerRadius="@dimen/rounded_corner_radius" />
+
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/rippleStrokeWidth"
+            android:padding="@dimen/line_spacing_extra"
+            android:src="@drawable/ic_share_media"
+            app:layout_constraintEnd_toEndOf="@+id/sdvVideoImage"
+            app:layout_constraintTop_toTopOf="@+id/sdvVideoImage" />
+
+
+        <ImageView
+            android:id="@+id/ivVideoVisibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/line_spacing_extra"
+            android:src="@drawable/ic_view_eye"
+            app:layout_constraintEnd_toEndOf="@+id/ivShare"
+            app:layout_constraintTop_toBottomOf="@+id/ivShare" />
+
+
+        <ImageView
+            android:id="@+id/ivPlayIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_video"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/sdvVideoImage"
+            app:layout_constraintEnd_toEndOf="@id/sdvVideoImage"
+            app:layout_constraintStart_toStartOf="@id/sdvVideoImage"
+            app:layout_constraintTop_toTopOf="@id/sdvVideoImage" />
+
+
+        <TextView
+            android:id="@+id/tvVideoUserName"
+            style="@style/StyleSemiBold"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/fragment_medium_margin"
+            android:text="James Deniel"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/colorHeaderTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:singleLine="true"
+            app:layout_constraintTop_toBottomOf="@id/sdvVideoImage" />
+
+        <TextView
+            android:id="@+id/tvVideoName"
+            style="@style/StyleRegular"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/line_spacing_extra"
+            android:text="May 23rd,2021"
+            android:textColor="@color/colorDisabledText"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvVideoUserName"
+            android:singleLine="true"
+            app:layout_constraintTop_toBottomOf="@id/tvVideoUserName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

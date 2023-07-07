@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/actionDescription"
+        android:title="@string/st_edit_members" />
+
+    <item
+        android:id="@+id/actionEditJobDetail"
+        android:title="@string/st_edit_job_detail"
+        />
+
+    <item
+        android:id="@+id/actionVisibility"
+        android:title="@string/st_media_visibility"
+        />
+    <item
+        android:id="@+id/actionDeleteJob"
+        android:title="@string/st_delete_job"
+        />
+
+
+
+</menu>

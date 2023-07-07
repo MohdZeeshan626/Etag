@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/drawable_color_white_rounded_corners_solid"
+    android:elevation="@dimen/home_card_elevation">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdvImage"
+        android:layout_width="@dimen/user_image_size_chat"
+        android:layout_height="@dimen/user_image_size_chat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundingBorderColor="?attr/primaryTextColor"
+        app:roundingBorderWidth="@dimen/divider_height"
+        app:placeholderImage="@drawable/ic_user_placeholder"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundAsCircle="true" />
+
+    <TextView
+        style="@style/StyleSemiBold"
+        android:id="@+id/tvName"
+        android:text="Anthani Dipazza"
+        app:layout_constraintStart_toEndOf="@+id/sdvImage"
+        app:layout_constraintTop_toTopOf="@+id/sdvImage"
+        android:textColor="@color/colorHeaderTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/sdvImage"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

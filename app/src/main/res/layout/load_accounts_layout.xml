@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="false"
+    android:elevation="@dimen/divider_height_medium"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+    android:background="@drawable/drawable_color_white_rounded_corners_solid">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/fragment_vertical_margin"
+        android:layout_height="@dimen/fragment_vertical_margin"
+        app:placeholderImage="@drawable/ic_mimi_logo"
+        app:roundAsCircle="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        style="@style/StyleBold"
+        android:id="@+id/tvName"
+        android:text="My Organisation Name"
+        app:layout_constraintStart_toEndOf="@+id/ivLogo"
+        app:layout_constraintTop_toTopOf="@+id/ivLogo"
+        android:textColor="@color/colorHeaderTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLogo"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvEmail"
+        android:text="tonnyofficial@gmail.com"
+        android:textColor="@color/colorDisabledText"
+       app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        android:layout_marginTop="@dimen/fragment_spacing"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/colorDividerDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail"/>
+
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvPhoneNumberLabel"
+        android:text="@string/st_phone_no"
+        android:textColor="@color/colorDisabledText"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+    <TextView
+        style="@style/StyleMedium"
+        android:id="@+id/tvPhoneNumber"
+        android:text="97456467"
+        android:textColor="@color/colorHeaderTitle"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/tvPhoneNumberLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvPhoneNumberLabel"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPhoneNumberLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvTypeLabel"
+        android:text="@string/st_type"
+        android:textColor="@color/colorDisabledText"
+        app:layout_constraintTop_toTopOf="@+id/tvPhoneNumber"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPhoneNumber"
+        app:layout_constraintStart_toEndOf="@+id/tvPhoneNumber"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+    <TextView
+        style="@style/StyleMedium"
+        android:id="@+id/tvType"
+        android:text="User"
+        android:textColor="@color/colorHeaderTitle"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/tvTypeLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvTypeLabel"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTypeLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+    <TextView
+        style="@style/StyleRegular"
+        android:id="@+id/tvStatus"
+        android:text="@string/st_status"
+        android:textColor="@color/colorDisabledText"
+        app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/small_text_size"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+    <TextView
+        style="@style/StyleMedium"
+        android:id="@+id/tvActive"
+        android:text="Active"
+        android:textColor="@color/colorHeaderTitle"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/tvStatus"
+        app:layout_constraintTop_toTopOf="@+id/tvStatus"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStatus"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/StyleSubmitButton"
+        android:id="@+id/btnViewDetail"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatus"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/st_view_details"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.max360group.cammax360.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/StyleSemiBold"
+                android:layout_width="0dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/st_create_new_job"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/colorHeaderTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/btnSave"
+                app:layout_constraintEnd_toStartOf="@+id/btnSave"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnSave" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSave"
+                style="@style/StyleSubmitButton"
+                android:layout_height="@dimen/user_image_size_chat"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:text="@string/st_save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etJobTitle"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                android:hint="@string/st_job_title"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/btnSave"
+                app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
+            <EditText
+                android:id="@+id/etJobAddress"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/st_job_address"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etJobTitle"
+                app:layout_constraintStart_toStartOf="@+id/etJobTitle"
+                app:layout_constraintTop_toBottomOf="@+id/etJobTitle" />
+
+            <EditText
+                android:id="@+id/etJobState"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/st_job_state"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etJobAddress"
+                app:layout_constraintStart_toStartOf="@+id/etJobAddress"
+                app:layout_constraintTop_toBottomOf="@+id/etJobAddress" />
+
+            <EditText
+                android:id="@+id/etJobCity"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/st_city"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etJobState"
+                app:layout_constraintStart_toStartOf="@+id/etJobState"
+                app:layout_constraintTop_toBottomOf="@+id/etJobState" />
+
+            <TextView
+                android:id="@+id/etStartDate"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/st_start_date"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="@+id/etJobCity"
+                app:layout_constraintStart_toStartOf="@+id/etJobCity"
+                app:layout_constraintTop_toBottomOf="@+id/etJobCity" />
+
+            <TextView
+                android:id="@+id/etEndDate"
+                style="@style/StyleInputEditTextLight"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/st_end_date"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/etStartDate"
+                app:layout_constraintStart_toStartOf="@+id/etStartDate"
+                app:layout_constraintTop_toBottomOf="@+id/etStartDate" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddMembers"
+                style="@style/StyleSubmitButton"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:drawableStart="@drawable/ic_new_jobs"
+                android:drawablePadding="@dimen/fragment_medium_margin"
+                android:gravity="center"
+                android:text="@string/st_add_members"
+                app:layout_constraintEnd_toStartOf="@id/btnInviteNew"
+                app:layout_constraintStart_toStartOf="@id/etStartDate"
+                app:layout_constraintTop_toBottomOf="@+id/etEndDate"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnInviteNew"
+                style="@style/StyleSubmitButton"
+                android:layout_width="0dp"
+                app:layout_constraintTop_toTopOf="@+id/btnAddMembers"
+                app:layout_constraintBottom_toBottomOf="@+id/btnAddMembers"
+                android:drawableStart="@drawable/ic_new_jobs"
+                android:drawablePadding="@dimen/fragment_medium_margin"
+                android:gravity="center"
+                android:text="@string/st_invite_new"
+                app:layout_constraintStart_toEndOf="@+id/btnAddMembers"
+                app:layout_constraintEnd_toEndOf="@id/etEndDate"
+                app:layout_constraintTop_toBottomOf="@+id/etEndDate"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvJobsList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/fragment_default_margin"
+                app:layout_constraintTop_toBottomOf="@+id/btnInviteNew"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</com.max360group.cammax360.views.utils.SlidingConstraintLayout>

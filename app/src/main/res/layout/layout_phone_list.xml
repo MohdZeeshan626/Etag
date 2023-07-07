@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/fragment_default_margin"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/drawable_color_white_rounded_corners_solid"
+    android:backgroundTint="?attr/primaryTransparent">
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/StyleSemiBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/st_name"
+        android:textColor="@color/colorHeaderTitle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/fragment_default_margin"/>
+
+    <EditText
+        android:id="@+id/etName"
+        style="@style/StyleInputEditText"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        android:singleLine="true"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/ivDelete"
+        android:layout_marginEnd="@dimen/fragment_default_margin"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="@dimen/fragment_vertical_margin"
+        android:layout_height="@dimen/fragment_vertical_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etName"
+        app:layout_constraintBottom_toBottomOf="@+id/etName"
+        android:layout_marginEnd="@dimen/fragment_default_margin"
+        android:src="@drawable/ic_delete"/>
+
+    <TextView
+        android:id="@+id/tvPhone"
+        style="@style/StyleSemiBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName"
+        android:text="@string/st_phone"
+        android:textColor="@color/colorHeaderTitle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+    <EditText
+        android:id="@+id/etPhone"
+        style="@style/StyleInputEditText"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        android:singleLine="true"
+        android:inputType="number"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/etEx"
+        android:layout_marginEnd="@dimen/fragment_medium_margin"
+        app:layout_constraintStart_toStartOf="@+id/tvPhone"
+        app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+    <EditText
+        android:id="@+id/etEx"
+        android:layout_width="@dimen/fragment_double_margin"
+        style="@style/StyleInputEditText"
+        android:layout_marginTop="@dimen/fragment_medium_margin"
+        android:singleLine="true"
+        android:paddingHorizontal="@dimen/fragment_small_margin"
+        android:inputType="number"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/etName"
+        app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+    <TextView
+        android:id="@+id/tvEx"
+        style="@style/StyleSemiBold"
+        app:layout_constraintStart_toStartOf="@+id/etEx"
+        app:layout_constraintTop_toTopOf="@+id/tvPhone"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPhone"
+        android:text="@string/st_ex"
+        android:textColor="@color/colorHeaderTitle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone"
+        android:button="@drawable/drawable_check_box_selector"
+        app:layout_constraintStart_toStartOf="@+id/etPhone"
+        android:layout_marginTop="@dimen/fragment_medium_margin">
+
+        <ImageView
+            android:layout_width="@dimen/ic_verctor_image_size"
+            android:layout_height="@dimen/ic_verctor_image_size"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+
+        <TextView
+          style="@style/StyleSemiBold"
+            android:text="@string/st_default"
+            android:gravity="center"
+            android:paddingTop="@dimen/line_spacing_extra"
+            android:layout_marginStart="@dimen/fragment_small_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone"
+        android:button="@drawable/drawable_check_box_selector"
+        app:layout_constraintStart_toStartOf="@+id/etPhone"
+        android:layout_marginTop="@dimen/fragment_medium_margin">
+
+        <ImageView
+            android:layout_width="@dimen/ic_verctor_image_size"
+            android:layout_height="@dimen/ic_verctor_image_size"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+
+        <TextView
+            style="@style/StyleSemiBold"
+            android:text="@string/st_default"
+            android:gravity="center"
+            android:textColor="@color/colorHeaderTitle"
+            android:paddingTop="@dimen/line_spacing_extra"
+            android:layout_marginStart="@dimen/fragment_small_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+
+    <com.max360group.cammax360.views.utils.CheckableLinearLayout
+        android:id="@+id/cbTextMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fragment_spacing"
+        app:layout_constraintTop_toBottomOf="@+id/cbDefault"
+        android:button="@drawable/drawable_check_box_selector"
+        app:layout_constraintStart_toStartOf="@+id/cbDefault">
+
+        <ImageView
+            android:layout_width="@dimen/ic_verctor_image_size"
+            android:layout_height="@dimen/ic_verctor_image_size"
+            android:duplicateParentState="true"
+            android:src="@drawable/drawable_check_box_selector" />
+
+        <TextView
+            style="@style/StyleSemiBold"
+            android:text="@string/st_text_message"
+            android:gravity="center"
+            android:textColor="@color/colorHeaderTitle"
+            android:paddingTop="@dimen/line_spacing_extra"
+            android:layout_marginStart="@dimen/fragment_small_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+    </com.max360group.cammax360.views.utils.CheckableLinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
